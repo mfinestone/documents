@@ -52,12 +52,6 @@
     </url>
         
     <url>
-     <loc>/projects/protocol/</loc>
-     <lastmod>2017-09-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/projects/relayer/</loc>
      <lastmod>2017-09-22</lastmod>
      <changefreq>daily</changefreq>
