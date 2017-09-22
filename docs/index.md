@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Welcome to Loopring Project.
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+Loopring is a project for decentralized ERC20 token exchange. The first public blockchain Loopring supports will be Ethereum, but other blockchains with smart contract capability can also be supported in a similar way, such as NEO, Qtum, and EOS. To have an overview of Loopring, please visit our website- [https://loopring.org](https://loopring.org).
 
-## Commands
+Loopring is not a decentralized exchange per se, as all building blocks of a trandational exchange are desemabled and put together again as different roles in a decentralized environment. These roles include, but may not be limited to, wallets, relayers, orderbook browsers, ring-miners, and asset tokenization services. Some of those roles are described in [Protocol Smart-Contract/Roles](protocol/roles.md).
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+This website consists of documents regarding many aspect of Loopring project and its sub-projects. This documentation sub-project is a on-going effort, we need and welcome contributions from the community. If you want to offer help, please join us on [Slack](https://loopring.now.sh/) and read the [How to contribute](community/how-to-contribute.md) page; if you ever offered any help, please feel free to add your name to the [Contributors](community/contributors.md) page, it's our honor to have you there.
