@@ -1,5 +1,8 @@
 site_name: Loopring Documentation
 theme: readthedocs
+strict: true
+repo_url: https://github.com/Loopring/documents
+site_description: Loopring - Decentralized Token Exchange Protocol
 pages:
     - Home: index.md
     - About: about.md
