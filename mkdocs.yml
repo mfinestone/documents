@@ -17,4 +17,6 @@ pages:
         - 'Relayer': projects/relayer.md
         - 'Ring Miner': projects/ringminer.md
         - 'Wallet': projects/wallet.md
-    - Contribution: contribution.md
+    - Community:
+        - 'How to contribute': community/how-to-contribute.md
+        - 'Contributors': community/contributors.md
