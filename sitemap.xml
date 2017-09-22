@@ -10,8 +10,76 @@
     
 
     
+        
     <url>
-     <loc>/about/</loc>
+     <loc>/protocol/overview/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/protocol/roles/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/protocol/ring/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/protocol/fee/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/protocol/pricing/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/projects/overview/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/projects/protocol/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/projects/relayer/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/projects/ringminer/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/projects/wallet/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/contribution/</loc>
      <lastmod>2017-09-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
