@@ -78,11 +78,19 @@
     
 
     
+        
     <url>
-     <loc>/contribution/</loc>
+     <loc>/community/how-to-contribute/</loc>
      <lastmod>2017-09-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/community/contributors/</loc>
+     <lastmod>2017-09-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
