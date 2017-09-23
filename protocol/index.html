@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Contribution - Loopring Documentation</title>
+  <title>Loopring Protocol - Loopring Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Contribution";
-    var mkdocs_page_input_path = "contribution.md";
-    var mkdocs_page_url = "/contribution/";
+    var mkdocs_page_name = "Loopring Protocol";
+    var mkdocs_page_input_path = "protocol.md";
+    var mkdocs_page_url = "/protocol/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -52,9 +52,24 @@
     <a class="" href="..">About</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../protocol/">Loopring Protocol</a>
+    <a class="current" href="./">Loopring Protocol</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#overview">Overview</a></li>
+    
+
+    <li class="toctree-l2"><a href="#order-rings">Order Rings</a></li>
+    
+
+    <li class="toctree-l2"><a href="#price-model">Price Model</a></li>
+    
+
+    <li class="toctree-l2"><a href="#fee-model">Fee Model</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -84,25 +99,9 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Contribution</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#contribution">Contribution</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#how-to-contribute">How to contribute</a></li>
-        
-            <li><a class="toctree-l3" href="#our-git-branching-model">Our Git Branching Model</a></li>
-        
-            <li><a class="toctree-l3" href="#contributors">Contributors</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../contribution/">Contribution</a>
 	    </li>
           
         </ul>
@@ -127,10 +126,10 @@
     
       
     
-    <li>Contribution</li>
+    <li>Loopring Protocol</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Loopring/documents/edit/master/docs/contribution.md"
+        <a href="https://github.com/Loopring/documents/edit/master/docs/protocol.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -140,23 +139,34 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="contribution">Contribution</h1>
-<h2 id="how-to-contribute">How to contribute</h2>
-<p>We use <a href="../slack.com">Slack</a> to communicate with each other. Feel free join in our slack channels:</p>
+                <h2 id="overview">Overview</h2>
+<p>Loopring Protocol (the Protocol) is a Ethereum smart-contract. It is the core of Loopring ecosystem and offers the following functionalites:</p>
 <ul>
-<li><a href="https://loopring-team.slack.com/messages/C60UCUECV">Loopring Announcement (read-only)</a></li>
-<li><a href="https://loopring-team.slack.com/messages/C6NTLGX3P">Loopring Community (English)</a></li>
-<li><a href="https://loopring-team.slack.com/messages/G77R2BQUV">Loopring Contributors</a></li>
+<li>
+<p><strong>Computing each order's current state</strong></p>
+<p>When orders are propagated off-chain, they never mutate, which means even when they are partially filled or cancelled, in the peer-to-peer network, different parties still see the same exact orders - otherwise orders need to be re-signed each time they get partially filled or cancelled. The protocol will verify the order's signature against its original state and compute order's current state based on the order's fill history, cancellation records, and its corresponding outgoing address's balance as well ERC20 allowance. All future matching and price/fee calculation is based on order's current states. </p>
+</li>
+<li>
+<p><strong>Verifying Miner-supplied Values</strong></p>
+<p>Because of the lack of float number computing capalibity, Loopring demands ring-miners to calculate the amount of token each order should pay to the next/previous order in the ring. The protocol shall verify these amounts as well as fees to be collected by miners are calculated correctly. Price and fee calculation deserve a detailed articulation, thus they have their own dedicated sections below.</p>
+</li>
+<li>
+<p><strong>Transfering Tokens for Settlement</strong></p>
+<p>The protocol will transfer ERC20 tokens between order addresses by using the <a href="https://github.com/Loopring/protocol/blob/master/contracts/TokenTransferDelegate.sol">TokenTransferDelegate</a>. The introduction of such a delegate makes upgrading Loopring protocol easier as all orders only need to authorize this delegate instead of different versions of the protocol. </p>
+</li>
+<li>
+<p><strong>Cancel or Partially Cancel Orders</strong></p>
+<p>Orders can be cancelled by invoking the <code>cancelOrder</code> protocol method. The other way to pseudo-cancel an order is to move all funds into a different address from the one the order's signed by. We may need to provide a batchCancelOrder method in next version.</p>
+</li>
+<li>
+<p><strong>Maitaining Fill History and Emit Events</strong></p>
+<p>In order to compute each order's current state, the protocol keeps track of each order's total filled amount and cancelled, aka fill/cancellation-records. The protocol also emit <code>OrderFilled</code>, <code>OrderCancelled</code>, and <code>RingMined</code> events. These events can be used by relayers to provide consolidated trading data to wallet users.</p>
+</li>
 </ul>
-<p>You may want to talk to Daniel Wang (<a href="mailto:daniel@loopring.org">daniel@loopring.org</a>), Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.</p>
-<h2 id="our-git-branching-model">Our Git Branching Model</h2>
-<p>For git repositories that have releases (this one not included), we will adopt <a href="http://nvie.com/posts/a-successful-git-branching-model/">"A Successful Git Branching Model"</a> starting from Nov. 1st, 2017.</p>
-<p><img alt="" src="../img/git-branching-model.png" /></p>
-<h2 id="contributors">Contributors</h2>
-<p>If your pull requests are ever accepted and merged, please create a pull request to put yoruself in this list.</p>
-<ul>
-<li>Fei YUAN -  Reviewed LRC token smart-contract and created an important pull request.</li>
-</ul>
+<p>Loopring protocol is open-source at github: <a href="https://github.com/Loopring/protocol">https://github.com/Loopring/protocol</a>. We are still working on its very first release.</p>
+<h2 id="order-rings">Order Rings</h2>
+<h2 id="price-model">Price Model</h2>
+<h2 id="fee-model">Fee Model</h2>
               
             </div>
           </div>
@@ -164,8 +174,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../projects/overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../projects/tokenization/" class="btn btn-neutral" title="Tokenization Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href=".." class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -193,8 +205,10 @@
           <a href="https://github.com/Loopring/documents" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../projects/tokenization/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../projects/overview/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

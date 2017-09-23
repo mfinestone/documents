@@ -10,37 +10,11 @@
     
 
     
-        
     <url>
-     <loc>/protocol/overview/</loc>
+     <loc>/protocol/</loc>
      <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    <url>
-     <loc>/protocol/roles/</loc>
-     <lastmod>2017-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/protocol/ring/</loc>
-     <lastmod>2017-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/protocol/fee/</loc>
-     <lastmod>2017-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/protocol/pricing/</loc>
-     <lastmod>2017-09-23</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
@@ -65,6 +39,12 @@
         
     <url>
      <loc>/projects/wallet/</loc>
+     <lastmod>2017-09-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/projects/tokenization/</loc>
      <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
