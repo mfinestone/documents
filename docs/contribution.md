@@ -1,67 +1,23 @@
-# Conclamat Diana Cretaeas lucum temptare
+# Contribution
 
-## Eras officio memor conclamat tractu retentus minasque
+## How to contribute
 
-Lorem markdownum ubi nullum et dixit expetit crocique fatemur, et in dedit, quid
-ensem novi, nec uberibus. Contraria praestanti cecidit suum non dolentibus
-odium; dies avenis [redde](http://quaque-sic.com/regem); tendens nec penates
-foret odoratas extremae, ubi. Abit utilitas ignibus antiquam umbra, lacubus
-*moratum* dum inter inpubesque nulla. [At aure
-stridore](http://augurvertitur.com/nataquesine) exstantem praesagia morbis,
-adsumit recingunt notas submergere *iuvenes Huic calidis* Tydides quaeque arma
-mutatus.
+We use [Slack](slack.com) to communicate with each other. Feel free join in our slack channels:
 
-## Tactus sunt digitis erat ambiguum ad laeva
+- [Loopring Announcement (read-only)](https://loopring-team.slack.com/messages/C60UCUECV)
+- [Loopring Community (English)](https://loopring-team.slack.com/messages/C6NTLGX3P)
+- [Loopring Contributors](https://loopring-team.slack.com/messages/G77R2BQUV)
 
-Ursaque diras tori, promittet primo et circo mortalia myricae. Fugat dorso litem
-eicit, sedes per, unus ament obstrepuere nominis nubila contulerant quercus.
-Coronis aut nulla rector medere malum, deo vulgata quo.
+You may want to talk to Daniel Wang, Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.
 
-## Illo cornua
+## Our Git Branching Model
 
-Rogos iura abit: illinc partimque in illa: doluit bacis, statione, mutum umbras
-in cetera. Spectas quod, gratissima flores crescunt carnes! Illa esse fera
-habebat ad superos premente Andraemone linquit deducit alterno, vi iussit
-marmoreum Numam poenas temptasse posset accipit.
+For git repositories that have releases (this one not included), we will adopt ["A Successful Git Branching Model"](http://nvie.com/posts/a-successful-git-branching-model/) starting from Nov. 1st, 2017.
 
-- Deducitur et radiis continget virgo
-- Sine petiit aratra et cortex
-- Gemit orbi illiusque parentes maciem
-- De vimine
+![](img/git-branching-model.png)
 
-## Nefandis Saturno vivacemque gestumque opus
+## Contributors
 
-Volenti conluerant mentae, dare virent tibi regni patrios tibi; neutra dedit
-conligit tecta ab, gratare. Scelus fronte nec ille, illo nitor, omnes stirpis,
-ilia, dum placidos cultros poplite.
+If your pull requests are ever accepted and merged, please create a pull request to put yoruself in this list.
 
-    file_index.virtual_graphic -= mediaModePersonal.web_mode(eps_meme,
-            template_text_read, 85);
-    if (tweak_print) {
-        agp_software_soa *= kde(webmaster_wordart, 85);
-        systemPlainDocking(mac_gamma);
-    }
-    if (pointGpuFlowchart.encryption_export_www(redundancy(soap_open)) >=
-            piracy_pack_login) {
-        encryption.computing_speed_client += switch.pack(uat_manet_text);
-        kilohertz = view_bus_ip;
-        link /= backlinkCiscInterface;
-    }
-    ethernet += gibibyte;
-    faq(uml_namespace_grep, flopsCpa + mirroredSdkBit + uml_scan);
-
-## Nunc nolim optet
-
-Inani erat **intibaque**, et, fida, tabo nova mirabere passus quondam, dignos
-similesque talis fecissent non volui. Inmisitque Aeneae:
-[lassa](http://www.nec-maior.org/mentis) vocantia pudorem omnia, orare aere.
-
-1. Undecimus atque quidem
-2. Deae si
-3. Sua luctor qua
-4. Thetis neque
-5. Frater nata fronde agnovit et
-
-Et et non olivae ipsius? Temptare odiumque, arbore adlabimur dentes, memorabile,
-violentaque virgo, fortius poenae: sit hic, artus ut! Illuc fidumque, usum,
-quicquam ferro neque protinus consulit mea tu arma.
+- Fei YUAN -  Reviewed LRC token smart-contract and created an important pull request.
