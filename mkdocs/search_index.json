@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Loopring Project.\n\n\nLoopring is a project for decentralized ERC20 token exchange. The first public blockchain Loopring supports will be Ethereum, but other blockchains with smart contract capability can also be supported in a similar way, such as NEO, Qtum, and EOS. To have an overview of Loopring, please visit our website- \nhttps://loopring.org\n.\n\n\nLoopring is not a decentralized exchange per se, as all building blocks of a trandational exchange are desemabled and put together again as different roles in a decentralized environment. These roles include, but may not be limited to, wallets, relayers, orderbook browsers, ring-miners, and asset tokenization services. Some of those roles are described in \nProtocol Smart-Contract/Roles\n.\n\n\nThis website consists of documents regarding many aspect of Loopring project and its sub-projects. This documentation sub-project is a on-going effort, we need and welcome contributions from the community. If you want to offer help, please join us on \nSlack\n and read the \nHow to contribute\n page; if you ever offered any help, please feel free to add your name to the \nContributors\n page, it's our honor to have you there.", 
+            "text": "Welcome to Loopring Project.\n\n\nLoopring is a project for decentralized ERC20 token exchange. The first public blockchain Loopring supports will be Ethereum, but other blockchains with smart contract capability can also be supported in a similar way, such as NEO, Qtum, and EOS. To have an overview of Loopring, please visit our website- \nhttps://loopring.org\n.\n\n\nLoopring is not a decentralized exchange per se, as all building blocks of a trandational exchange are desemabled and put together again as different roles in a decentralized environment. These roles include, but may not be limited to, wallets, relayers, orderbook browsers, ring-miners, and asset tokenization services. Some of those roles are described in \nProtocol Smart-Contract/Roles\n.\n\n\nThis website consists of documents regarding many aspect of Loopring project and its sub-projects. This documentation sub-project is a on-going effort, we need and welcome contributions from the community. If you want to offer help, please join us on \nSlack\n and read the \nHow to contribute\n section; if you ever offered any help, please feel free to add your name to the \nContributors\n section, it's our honor to have you there.", 
             "title": "About"
         }, 
         {
             "location": "/#welcome-to-loopring-project", 
-            "text": "Loopring is a project for decentralized ERC20 token exchange. The first public blockchain Loopring supports will be Ethereum, but other blockchains with smart contract capability can also be supported in a similar way, such as NEO, Qtum, and EOS. To have an overview of Loopring, please visit our website-  https://loopring.org .  Loopring is not a decentralized exchange per se, as all building blocks of a trandational exchange are desemabled and put together again as different roles in a decentralized environment. These roles include, but may not be limited to, wallets, relayers, orderbook browsers, ring-miners, and asset tokenization services. Some of those roles are described in  Protocol Smart-Contract/Roles .  This website consists of documents regarding many aspect of Loopring project and its sub-projects. This documentation sub-project is a on-going effort, we need and welcome contributions from the community. If you want to offer help, please join us on  Slack  and read the  How to contribute  page; if you ever offered any help, please feel free to add your name to the  Contributors  page, it's our honor to have you there.", 
+            "text": "Loopring is a project for decentralized ERC20 token exchange. The first public blockchain Loopring supports will be Ethereum, but other blockchains with smart contract capability can also be supported in a similar way, such as NEO, Qtum, and EOS. To have an overview of Loopring, please visit our website-  https://loopring.org .  Loopring is not a decentralized exchange per se, as all building blocks of a trandational exchange are desemabled and put together again as different roles in a decentralized environment. These roles include, but may not be limited to, wallets, relayers, orderbook browsers, ring-miners, and asset tokenization services. Some of those roles are described in  Protocol Smart-Contract/Roles .  This website consists of documents regarding many aspect of Loopring project and its sub-projects. This documentation sub-project is a on-going effort, we need and welcome contributions from the community. If you want to offer help, please join us on  Slack  and read the  How to contribute  section; if you ever offered any help, please feel free to add your name to the  Contributors  section, it's our honor to have you there.", 
             "title": "Welcome to Loopring Project."
         }, 
         {
@@ -326,74 +326,29 @@
             "title": "Nunc nolim optet"
         }, 
         {
-            "location": "/community/how-to-contribute/", 
-            "text": "Conclamat Diana Cretaeas lucum temptare\n\n\nEras officio memor conclamat tractu retentus minasque\n\n\nLorem markdownum ubi nullum et dixit expetit crocique fatemur, et in dedit, quid\nensem novi, nec uberibus. Contraria praestanti cecidit suum non dolentibus\nodium; dies avenis \nredde\n; tendens nec penates\nforet odoratas extremae, ubi. Abit utilitas ignibus antiquam umbra, lacubus\n\nmoratum\n dum inter inpubesque nulla. \nAt aure\nstridore\n exstantem praesagia morbis,\nadsumit recingunt notas submergere \niuvenes Huic calidis\n Tydides quaeque arma\nmutatus.\n\n\nTactus sunt digitis erat ambiguum ad laeva\n\n\nUrsaque diras tori, promittet primo et circo mortalia myricae. Fugat dorso litem\neicit, sedes per, unus ament obstrepuere nominis nubila contulerant quercus.\nCoronis aut nulla rector medere malum, deo vulgata quo.\n\n\nIllo cornua\n\n\nRogos iura abit: illinc partimque in illa: doluit bacis, statione, mutum umbras\nin cetera. Spectas quod, gratissima flores crescunt carnes! Illa esse fera\nhabebat ad superos premente Andraemone linquit deducit alterno, vi iussit\nmarmoreum Numam poenas temptasse posset accipit.\n\n\n\n\nDeducitur et radiis continget virgo\n\n\nSine petiit aratra et cortex\n\n\nGemit orbi illiusque parentes maciem\n\n\nDe vimine\n\n\n\n\nNefandis Saturno vivacemque gestumque opus\n\n\nVolenti conluerant mentae, dare virent tibi regni patrios tibi; neutra dedit\nconligit tecta ab, gratare. Scelus fronte nec ille, illo nitor, omnes stirpis,\nilia, dum placidos cultros poplite.\n\n\nfile_index.virtual_graphic -= mediaModePersonal.web_mode(eps_meme,\n        template_text_read, 85);\nif (tweak_print) {\n    agp_software_soa *= kde(webmaster_wordart, 85);\n    systemPlainDocking(mac_gamma);\n}\nif (pointGpuFlowchart.encryption_export_www(redundancy(soap_open)) \n=\n        piracy_pack_login) {\n    encryption.computing_speed_client += switch.pack(uat_manet_text);\n    kilohertz = view_bus_ip;\n    link /= backlinkCiscInterface;\n}\nethernet += gibibyte;\nfaq(uml_namespace_grep, flopsCpa + mirroredSdkBit + uml_scan);\n\n\n\nNunc nolim optet\n\n\nInani erat \nintibaque\n, et, fida, tabo nova mirabere passus quondam, dignos\nsimilesque talis fecissent non volui. Inmisitque Aeneae:\n\nlassa\n vocantia pudorem omnia, orare aere.\n\n\n\n\nUndecimus atque quidem\n\n\nDeae si\n\n\nSua luctor qua\n\n\nThetis neque\n\n\nFrater nata fronde agnovit et\n\n\n\n\nEt et non olivae ipsius? Temptare odiumque, arbore adlabimur dentes, memorabile,\nviolentaque virgo, fortius poenae: sit hic, artus ut! Illuc fidumque, usum,\nquicquam ferro neque protinus consulit mea tu arma.", 
+            "location": "/contribution/", 
+            "text": "Contribution\n\n\nHow to contribute\n\n\nWe use \nSlack\n to communicate with each other. Feel free join in our slack channels:\n\n\n\n\nLoopring Announcement (read-only)\n\n\nLoopring Community (English)\n\n\nLoopring Contributors\n\n\n\n\nYou may want to talk to Daniel Wang, Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.\n\n\nOur Git Branching Model\n\n\nFor git repositories that have releases (this one not included), we will adopt \n\"A Successful Git Branching Model\"\n starting from Nov. 1st, 2017.\n\n\n\n\nContributors\n\n\nIf your pull requests are ever accepted and merged, please create a pull request to put yoruself in this list.\n\n\n\n\nFei YUAN -  Reviewed LRC token smart-contract and created an important pull request.", 
+            "title": "Contribution"
+        }, 
+        {
+            "location": "/contribution/#contribution", 
+            "text": "", 
+            "title": "Contribution"
+        }, 
+        {
+            "location": "/contribution/#how-to-contribute", 
+            "text": "We use  Slack  to communicate with each other. Feel free join in our slack channels:   Loopring Announcement (read-only)  Loopring Community (English)  Loopring Contributors   You may want to talk to Daniel Wang, Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.", 
             "title": "How to contribute"
         }, 
         {
-            "location": "/community/how-to-contribute/#conclamat-diana-cretaeas-lucum-temptare", 
-            "text": "", 
-            "title": "Conclamat Diana Cretaeas lucum temptare"
+            "location": "/contribution/#our-git-branching-model", 
+            "text": "For git repositories that have releases (this one not included), we will adopt  \"A Successful Git Branching Model\"  starting from Nov. 1st, 2017.", 
+            "title": "Our Git Branching Model"
         }, 
         {
-            "location": "/community/how-to-contribute/#eras-officio-memor-conclamat-tractu-retentus-minasque", 
-            "text": "Lorem markdownum ubi nullum et dixit expetit crocique fatemur, et in dedit, quid\nensem novi, nec uberibus. Contraria praestanti cecidit suum non dolentibus\nodium; dies avenis  redde ; tendens nec penates\nforet odoratas extremae, ubi. Abit utilitas ignibus antiquam umbra, lacubus moratum  dum inter inpubesque nulla.  At aure\nstridore  exstantem praesagia morbis,\nadsumit recingunt notas submergere  iuvenes Huic calidis  Tydides quaeque arma\nmutatus.", 
-            "title": "Eras officio memor conclamat tractu retentus minasque"
-        }, 
-        {
-            "location": "/community/how-to-contribute/#tactus-sunt-digitis-erat-ambiguum-ad-laeva", 
-            "text": "Ursaque diras tori, promittet primo et circo mortalia myricae. Fugat dorso litem\neicit, sedes per, unus ament obstrepuere nominis nubila contulerant quercus.\nCoronis aut nulla rector medere malum, deo vulgata quo.", 
-            "title": "Tactus sunt digitis erat ambiguum ad laeva"
-        }, 
-        {
-            "location": "/community/how-to-contribute/#illo-cornua", 
-            "text": "Rogos iura abit: illinc partimque in illa: doluit bacis, statione, mutum umbras\nin cetera. Spectas quod, gratissima flores crescunt carnes! Illa esse fera\nhabebat ad superos premente Andraemone linquit deducit alterno, vi iussit\nmarmoreum Numam poenas temptasse posset accipit.   Deducitur et radiis continget virgo  Sine petiit aratra et cortex  Gemit orbi illiusque parentes maciem  De vimine", 
-            "title": "Illo cornua"
-        }, 
-        {
-            "location": "/community/how-to-contribute/#nefandis-saturno-vivacemque-gestumque-opus", 
-            "text": "Volenti conluerant mentae, dare virent tibi regni patrios tibi; neutra dedit\nconligit tecta ab, gratare. Scelus fronte nec ille, illo nitor, omnes stirpis,\nilia, dum placidos cultros poplite.  file_index.virtual_graphic -= mediaModePersonal.web_mode(eps_meme,\n        template_text_read, 85);\nif (tweak_print) {\n    agp_software_soa *= kde(webmaster_wordart, 85);\n    systemPlainDocking(mac_gamma);\n}\nif (pointGpuFlowchart.encryption_export_www(redundancy(soap_open))  =\n        piracy_pack_login) {\n    encryption.computing_speed_client += switch.pack(uat_manet_text);\n    kilohertz = view_bus_ip;\n    link /= backlinkCiscInterface;\n}\nethernet += gibibyte;\nfaq(uml_namespace_grep, flopsCpa + mirroredSdkBit + uml_scan);", 
-            "title": "Nefandis Saturno vivacemque gestumque opus"
-        }, 
-        {
-            "location": "/community/how-to-contribute/#nunc-nolim-optet", 
-            "text": "Inani erat  intibaque , et, fida, tabo nova mirabere passus quondam, dignos\nsimilesque talis fecissent non volui. Inmisitque Aeneae: lassa  vocantia pudorem omnia, orare aere.   Undecimus atque quidem  Deae si  Sua luctor qua  Thetis neque  Frater nata fronde agnovit et   Et et non olivae ipsius? Temptare odiumque, arbore adlabimur dentes, memorabile,\nviolentaque virgo, fortius poenae: sit hic, artus ut! Illuc fidumque, usum,\nquicquam ferro neque protinus consulit mea tu arma.", 
-            "title": "Nunc nolim optet"
-        }, 
-        {
-            "location": "/community/contributors/", 
-            "text": "Conclamat Diana Cretaeas lucum temptare\n\n\nEras officio memor conclamat tractu retentus minasque\n\n\nLorem markdownum ubi nullum et dixit expetit crocique fatemur, et in dedit, quid\nensem novi, nec uberibus. Contraria praestanti cecidit suum non dolentibus\nodium; dies avenis \nredde\n; tendens nec penates\nforet odoratas extremae, ubi. Abit utilitas ignibus antiquam umbra, lacubus\n\nmoratum\n dum inter inpubesque nulla. \nAt aure\nstridore\n exstantem praesagia morbis,\nadsumit recingunt notas submergere \niuvenes Huic calidis\n Tydides quaeque arma\nmutatus.\n\n\nTactus sunt digitis erat ambiguum ad laeva\n\n\nUrsaque diras tori, promittet primo et circo mortalia myricae. Fugat dorso litem\neicit, sedes per, unus ament obstrepuere nominis nubila contulerant quercus.\nCoronis aut nulla rector medere malum, deo vulgata quo.\n\n\nIllo cornua\n\n\nRogos iura abit: illinc partimque in illa: doluit bacis, statione, mutum umbras\nin cetera. Spectas quod, gratissima flores crescunt carnes! Illa esse fera\nhabebat ad superos premente Andraemone linquit deducit alterno, vi iussit\nmarmoreum Numam poenas temptasse posset accipit.\n\n\n\n\nDeducitur et radiis continget virgo\n\n\nSine petiit aratra et cortex\n\n\nGemit orbi illiusque parentes maciem\n\n\nDe vimine\n\n\n\n\nNefandis Saturno vivacemque gestumque opus\n\n\nVolenti conluerant mentae, dare virent tibi regni patrios tibi; neutra dedit\nconligit tecta ab, gratare. Scelus fronte nec ille, illo nitor, omnes stirpis,\nilia, dum placidos cultros poplite.\n\n\nfile_index.virtual_graphic -= mediaModePersonal.web_mode(eps_meme,\n        template_text_read, 85);\nif (tweak_print) {\n    agp_software_soa *= kde(webmaster_wordart, 85);\n    systemPlainDocking(mac_gamma);\n}\nif (pointGpuFlowchart.encryption_export_www(redundancy(soap_open)) \n=\n        piracy_pack_login) {\n    encryption.computing_speed_client += switch.pack(uat_manet_text);\n    kilohertz = view_bus_ip;\n    link /= backlinkCiscInterface;\n}\nethernet += gibibyte;\nfaq(uml_namespace_grep, flopsCpa + mirroredSdkBit + uml_scan);\n\n\n\nNunc nolim optet\n\n\nInani erat \nintibaque\n, et, fida, tabo nova mirabere passus quondam, dignos\nsimilesque talis fecissent non volui. Inmisitque Aeneae:\n\nlassa\n vocantia pudorem omnia, orare aere.\n\n\n\n\nUndecimus atque quidem\n\n\nDeae si\n\n\nSua luctor qua\n\n\nThetis neque\n\n\nFrater nata fronde agnovit et\n\n\n\n\nEt et non olivae ipsius? Temptare odiumque, arbore adlabimur dentes, memorabile,\nviolentaque virgo, fortius poenae: sit hic, artus ut! Illuc fidumque, usum,\nquicquam ferro neque protinus consulit mea tu arma.", 
+            "location": "/contribution/#contributors", 
+            "text": "If your pull requests are ever accepted and merged, please create a pull request to put yoruself in this list.   Fei YUAN -  Reviewed LRC token smart-contract and created an important pull request.", 
             "title": "Contributors"
-        }, 
-        {
-            "location": "/community/contributors/#conclamat-diana-cretaeas-lucum-temptare", 
-            "text": "", 
-            "title": "Conclamat Diana Cretaeas lucum temptare"
-        }, 
-        {
-            "location": "/community/contributors/#eras-officio-memor-conclamat-tractu-retentus-minasque", 
-            "text": "Lorem markdownum ubi nullum et dixit expetit crocique fatemur, et in dedit, quid\nensem novi, nec uberibus. Contraria praestanti cecidit suum non dolentibus\nodium; dies avenis  redde ; tendens nec penates\nforet odoratas extremae, ubi. Abit utilitas ignibus antiquam umbra, lacubus moratum  dum inter inpubesque nulla.  At aure\nstridore  exstantem praesagia morbis,\nadsumit recingunt notas submergere  iuvenes Huic calidis  Tydides quaeque arma\nmutatus.", 
-            "title": "Eras officio memor conclamat tractu retentus minasque"
-        }, 
-        {
-            "location": "/community/contributors/#tactus-sunt-digitis-erat-ambiguum-ad-laeva", 
-            "text": "Ursaque diras tori, promittet primo et circo mortalia myricae. Fugat dorso litem\neicit, sedes per, unus ament obstrepuere nominis nubila contulerant quercus.\nCoronis aut nulla rector medere malum, deo vulgata quo.", 
-            "title": "Tactus sunt digitis erat ambiguum ad laeva"
-        }, 
-        {
-            "location": "/community/contributors/#illo-cornua", 
-            "text": "Rogos iura abit: illinc partimque in illa: doluit bacis, statione, mutum umbras\nin cetera. Spectas quod, gratissima flores crescunt carnes! Illa esse fera\nhabebat ad superos premente Andraemone linquit deducit alterno, vi iussit\nmarmoreum Numam poenas temptasse posset accipit.   Deducitur et radiis continget virgo  Sine petiit aratra et cortex  Gemit orbi illiusque parentes maciem  De vimine", 
-            "title": "Illo cornua"
-        }, 
-        {
-            "location": "/community/contributors/#nefandis-saturno-vivacemque-gestumque-opus", 
-            "text": "Volenti conluerant mentae, dare virent tibi regni patrios tibi; neutra dedit\nconligit tecta ab, gratare. Scelus fronte nec ille, illo nitor, omnes stirpis,\nilia, dum placidos cultros poplite.  file_index.virtual_graphic -= mediaModePersonal.web_mode(eps_meme,\n        template_text_read, 85);\nif (tweak_print) {\n    agp_software_soa *= kde(webmaster_wordart, 85);\n    systemPlainDocking(mac_gamma);\n}\nif (pointGpuFlowchart.encryption_export_www(redundancy(soap_open))  =\n        piracy_pack_login) {\n    encryption.computing_speed_client += switch.pack(uat_manet_text);\n    kilohertz = view_bus_ip;\n    link /= backlinkCiscInterface;\n}\nethernet += gibibyte;\nfaq(uml_namespace_grep, flopsCpa + mirroredSdkBit + uml_scan);", 
-            "title": "Nefandis Saturno vivacemque gestumque opus"
-        }, 
-        {
-            "location": "/community/contributors/#nunc-nolim-optet", 
-            "text": "Inani erat  intibaque , et, fida, tabo nova mirabere passus quondam, dignos\nsimilesque talis fecissent non volui. Inmisitque Aeneae: lassa  vocantia pudorem omnia, orare aere.   Undecimus atque quidem  Deae si  Sua luctor qua  Thetis neque  Frater nata fronde agnovit et   Et et non olivae ipsius? Temptare odiumque, arbore adlabimur dentes, memorabile,\nviolentaque virgo, fortius poenae: sit hic, artus ut! Illuc fidumque, usum,\nquicquam ferro neque protinus consulit mea tu arma.", 
-            "title": "Nunc nolim optet"
         }
     ]
 }

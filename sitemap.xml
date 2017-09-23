@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,31 +13,31 @@
         
     <url>
      <loc>/protocol/overview/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/protocol/roles/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/protocol/ring/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/protocol/fee/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/protocol/pricing/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -47,44 +47,36 @@
         
     <url>
      <loc>/projects/overview/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/projects/relayer/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/projects/ringminer/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/projects/wallet/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
-        
     <url>
-     <loc>/community/how-to-contribute/</loc>
-     <lastmod>2017-09-22</lastmod>
+     <loc>/contribution/</loc>
+     <lastmod>2017-09-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    <url>
-     <loc>/community/contributors/</loc>
-     <lastmod>2017-09-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
 </urlset>
