@@ -47,7 +47,16 @@ The innovative part of our fee model is as follows: we only allow ring-miners to
 
 Lets say a order specified 10LRC as fee, assume this order is fully filled and CSS is 10S (S is the selling token), the miner either collect 10LRC as fee, or collect 10S and pays 10LRC to order submitter.
 
+If `f` is LRC fee, `x` is the CSS, then miner's income is `y = max(f, x-f)`. If we plot this function, we have:
+
+![](img/fee-model.jpg)
 ### The Rationals
+
+The orange line represents the CSS fee model, and the blue line represents our current fee model. As you can see:
+
+- if CSS is 0, miners will choose `f` so they still get a constant income, therefore they are certainly incentivized.
+- if `f`, the LRC fee is zero, `y = max(f, x-f)` becomes `y = x`, this is exactly the fee model without LRC involved. So our fee model is just a genelized model.
+- if CSS's value is equal to or greater than twice the value of LRC fee, miner will choose `x-f`.
 
 (TODO)
 
