@@ -27,18 +27,27 @@ Loopring protocol is open-source at github: [https://github.com/Loopring/protoco
 
 ## Order Rings
 
-supersimmetry {[da447m@yahoo.com](mailto:da447m@yahoo.com)} came up with this 《[Remarks on Loopring](pdf/supersimmetry-loopring-remark.pdf)》 document to explain what order-rings (match-ring) are, when orders can form a valid ring to be filled, and how fees are calculated. We really appreciate such an effort and it is worth of a reading. Please be noted in current version of this document, the fee model is slightly different from our whitepaper and our current implementation. Please see the Fee Model secion below.
-
-## Price Model
-
-See read the [white-paper](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf) as well as supersimmetry's [Remarks on Loopring](pdf/supersimmetry-loopring-remark.pdf) for details.
+supersimmetry {[da447m@yahoo.com](mailto:da447m@yahoo.com)} came up with this 《[Remarks on Loopring](pdf/supersimmetry-loopring-remark.pdf)》 document to explain what order-rings (match-ring) are, when orders can form a valid ring to be filled, and how fill rates are calculated. We really appreciate such an effort and it is worth of a reading. Please be noted in current protocol implementation, the pricing model is the same as in our whitepaper and the above document, but the fee model is different.
 
 When impelmented in solidity, Loopring protocol doesn't perform calculating exchange rate or amount, but perform verification of miner-supplied exchange amount for each order (specificily, how much each order should pay to the previous order in the ring). This is beause 1) solidity doens't have support for float number computation, especially `pow(x, 1/n)`, and 2) we prefer math computation to be done by miners to save gas.
 
+
+## Exchange Rate Verification
 Below we are going to describe how rate related verification is done.
 
 (TODO)
 
 ## Fee Model
 
+Our [whitepaper](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf) elaberated a possible income source for ring-miners called "cost saving share" or CSS. The nice thing about CSS is that ring-miners' interests and order submitters' interests are aligned - the more ring-miners help save order submitter's cost, the more the ring-miners will gain as income.
+
+But in situations where the actually exchange rates in a ring are exactly the same as each order's original rates, the "cost saving" is zero thus the CSS is also zero, therefore ring-miners are not incentivized to submit such a ring as they have no income at all. With the introduction of LRC token, we allow order submitter to specify the amount of LRC to be paid to miners as mining fee. This mining fee is paid proportionally if an order is partially filled.
+
+The innovative part of our fee model is as follows: we only allow ring-miners to choose either LRC fee or CSS, additionally, if ring-miners choose CSS, they must pay back the same amount of LRC back to order submitter as specifed.
+
+Lets say a order specified 10LRC as fee, assume this order is fully filled and CSS is 10S (S is the selling token), the miner either collect 10LRC as fee, or collect 10S and pays 10LRC to order submitter.
+
+### The Rationals
+
 (TODO)
+
