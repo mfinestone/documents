@@ -8,7 +8,7 @@ We use [Slack](slack.com) to communicate with each other. Feel free join in our 
 - [Loopring Community (English)](https://loopring-team.slack.com/messages/C6NTLGX3P)
 - [Loopring Contributors](https://loopring-team.slack.com/messages/G77R2BQUV)
 
-You may want to talk to Daniel Wang, Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.
+You may want to talk to Daniel Wang ([daniel@loopring.org](mailto:daniel@loopring.org)), Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.
 
 ## Our Git Branching Model
 

@@ -5,17 +5,11 @@ repo_url: https://github.com/Loopring/documents
 site_description: Loopring - Decentralized Token Exchange Protocol
 pages:
     - About: index.md
-    - Protocol Smart-Contract:
-        - 'Overview': protocol/overview.md
-        - 'Roles': protocol/roles.md
-        - 'Order-Rings': protocol/ring.md
-        - 'Fee Model': protocol/fee.md
-        - 'Pricing': protocol/pricing.md
+    - 'Loopring Protocol': protocol.md
     - Other Sub-Projects:
         - 'Overview': projects/overview.md
-        - 'Relayer': projects/relayer.md
-        - 'Ring Miner': projects/ringminer.md
-        - 'Wallet': projects/wallet.md
-    - Community:
-        - 'How to contribute': community/how-to-contribute.md
-        - 'Contributors': community/contributors.md
+        - 'Relayers': projects/relayer.md
+        - 'Ring Miners': projects/ringminer.md
+        - 'Wallets': projects/wallet.md
+        - 'Tokenization Services': projects/tokenization.md
+    - Contribution: contribution.md
