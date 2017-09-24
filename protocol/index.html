@@ -165,8 +165,14 @@
 </ul>
 <p>Loopring protocol is open-source at github: <a href="https://github.com/Loopring/protocol">https://github.com/Loopring/protocol</a>. We are still working on its very first release.</p>
 <h2 id="order-rings">Order Rings</h2>
+<p>supersimmetry {<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>} came up with this 《<a href="../pdf/supersimmetry-loopring-remark.pdf">Remarks on Loopring</a>》 document to explain what order-rings (match-ring) are, when orders can form a valid ring to be filled, and how fees are calculated. We really appreciate such an effort and it is worth of a reading. Please be noted in current version of this document, the fee model is slightly different from our whitepaper and our current implementation. Please see the Fee Model secion below.</p>
 <h2 id="price-model">Price Model</h2>
+<p>See read the <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">white-paper</a> as well as supersimmetry's <a href="../pdf/supersimmetry-loopring-remark.pdf">Remarks on Loopring</a> for details.</p>
+<p>When impelmented in solidity, Loopring protocol doesn't perform calculating exchange rate or amount, but perform verification of miner-supplied exchange amount for each order (specificily, how much each order should pay to the previous order in the ring). This is beause 1) solidity doens't have support for float number computation, especially <code>pow(x, 1/n)</code>, and 2) we prefer math computation to be done by miners to save gas.</p>
+<p>Below we are going to describe how rate related verification is done.</p>
+<p>(TODO)</p>
 <h2 id="fee-model">Fee Model</h2>
+<p>(TODO)</p>
               
             </div>
           </div>
