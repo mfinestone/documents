@@ -39,24 +39,24 @@ Below we are going to describe how rate related verification is done.
 
 ## Fee Model
 
-Our [whitepaper](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf) elaberated a possible income source for ring-miners called "cost saving share" or CSS. The nice thing about CSS is that ring-miners' interests and order submitters' interests are aligned - the more ring-miners help save order submitter's cost, the more the ring-miners will gain as income.
+Our [whitepaper](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf) elaberated a possible income source for ring-miners called "margin split" or 'split'. The nice thing about split is that ring-miners' interests and order submitters' interests are aligned - the more ring-miners help save order submitter's cost, the more the ring-miners will gain as income.
 
-But in situations where the actually exchange rates in a ring are exactly the same as each order's original rates, the "cost saving" is zero thus the CSS is also zero, therefore ring-miners are not incentivized to submit such a ring as they have no income at all. With the introduction of LRC token, we allow order submitter to specify the amount of LRC to be paid to miners as mining fee. This mining fee is paid proportionally if an order is partially filled.
+But in situations where the actually exchange rates in a ring are exactly the same as each order's original rates, the margin is zero thus the split is also zero, therefore ring-miners are not incentivized to submit such a ring as they have no income at all. With the introduction of LRC token, we allow order submitter to specify the amount of LRC to be paid to miners as mining fee. This mining fee is paid proportionally if an order is partially filled.
 
-The innovative part of our fee model is as follows: we only allow ring-miners to choose either LRC fee or CSS, additionally, if ring-miners choose CSS, they must pay back the same amount of LRC back to order submitter as specifed.
+The innovative part of our fee model is as follows: we only allow ring-miners to choose either LRC fee or split, additionally, if ring-miners choose split, they must pay back the same amount of LRC back to order submitter as specifed.
 
-Lets say a order specified 10LRC as fee, assume this order is fully filled and CSS is 10S (S is the selling token), the miner either collect 10LRC as fee, or collect 10S and pays 10LRC to order submitter.
+Lets say a order specified 10LRC as fee, assume this order is fully filled and split is 10S (S is the selling token), the miner either collect 10LRC as fee, or collect 10S and pays 10LRC to order submitter.
 
-If `f` is LRC fee, `x` is the CSS, then miner's income is `y = max(f, x-f)`. If we plot this function, we have:
+If `f` is LRC fee, `x` is the split, then miner's income is `y = max(f, x-f)`. If we plot this function, we have:
 
 ![](img/fee-model.jpg)
 ### The Rationals
 
-The orange line represents the CSS fee model, and the blue line represents our current fee model. As you can see:
+The orange line represents the split fee model, and the blue line represents our current fee model. As you can see:
 
-- if CSS is 0, miners will choose `f` so they still get a constant income, therefore they are certainly incentivized.
+- if split is 0, miners will choose `f` so they still get a constant income, therefore they are certainly incentivized.
 - if `f`, the LRC fee is zero, `y = max(f, x-f)` becomes `y = x`, this is exactly the fee model without LRC involved. So our fee model is just a genelized model.
-- if CSS's value is equal to or greater than twice the value of LRC fee, miner will choose `x-f`.
+- if split's value is equal to or greater than twice the value of LRC fee, miner will choose `x-f`.
 
 (TODO)
 
