@@ -4,6 +4,8 @@
 <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
 <div class="coinmarketcap-currency-widget" data-currency="loopring" data-base="USD"  data-secondary="BTC"></div>
 
+To learn more about LRC token, checkout [https://etherscan.io/address/lrctoken.eth](https://etherscan.io/address/lrctoken.eth) or 
+[https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f](https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f).
 
 ## Circulating Supply
 
@@ -56,7 +58,7 @@ Burned	|	20,117,776	|	1.4%
 Institute Investors	|	118,626,980	|	8.5%
 Incentive Plans|	131,498,150	|	9.4%
 Circulating	Supply|	286,170,755.5238	|	20.5%
-**Total Supply**	|	**1,395,076,054.5238**	|	**100.0%**
+**Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054.5238</a>	|	**100.0%**
 
 Please note:
 
