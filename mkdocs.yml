@@ -6,6 +6,7 @@ site_description: Loopring - Decentralized Token Exchange Protocol
 pages:
     - About: index.md
     - Ecosystem: overview.md
+    - LRC Token: token.md
     - Projects:
         - 'Protocol': projects/protocol.md
         - 'Relays': projects/relay.md
