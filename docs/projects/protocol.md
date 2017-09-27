@@ -21,7 +21,7 @@ Loopring Protocol (the Protocol) is a Ethereum smart-contract. It is the core of
 
 - **Maitaining Fill History and Emit Events**
 
-	In order to compute each order's current state, the protocol keeps track of each order's total filled amount and cancelled, aka fill/cancellation-records. The protocol also emit `OrderFilled`, `OrderCancelled`, and `RingMined` events. These events can be used by relayers to provide consolidated trading data to wallet users.
+	In order to compute each order's current state, the protocol keeps track of each order's total filled amount and cancelled, aka fill/cancellation-records. The protocol also emit `OrderFilled`, `OrderCancelled`, and `RingMined` events. These events can be used by relays to provide consolidated trading data to wallet users.
 
 Loopring protocol is open-source at github: [https://github.com/Loopring/protocol](https://github.com/Loopring/protocol). We are still working on its very first release.
 
