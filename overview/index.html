@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Contribution - Loopring Documentation</title>
+  <title>Ecosystem - Loopring Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Contribution";
-    var mkdocs_page_input_path = "contribution.md";
-    var mkdocs_page_url = "/contribution/";
+    var mkdocs_page_name = "Ecosystem";
+    var mkdocs_page_input_path = "overview.md";
+    var mkdocs_page_url = "/overview/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -52,9 +52,21 @@
     <a class="" href="..">About</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../overview/">Ecosystem</a>
+    <a class="current" href="./">Ecosystem</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#overview">Overview</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#roles">Roles</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -84,25 +96,9 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Contribution</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#contribution">Contribution</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#how-to-contribute">How to contribute</a></li>
-        
-            <li><a class="toctree-l3" href="#our-git-branching-model">Our Git Branching Model</a></li>
-        
-            <li><a class="toctree-l3" href="#contributors">Contributors</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../contribution/">Contribution</a>
 	    </li>
           
         </ul>
@@ -127,10 +123,10 @@
     
       
     
-    <li>Contribution</li>
+    <li>Ecosystem</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/Loopring/documents/edit/master/docs/contribution.md"
+        <a href="https://github.com/Loopring/documents/edit/master/docs/overview.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -140,23 +136,18 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="contribution">Contribution</h1>
-<h2 id="how-to-contribute">How to contribute</h2>
-<p>We use <a href="../slack.com">Slack</a> to communicate with each other. Feel free join in our slack channels:</p>
+                <h1 id="overview">Overview</h1>
+<p>You can learn more about the background and general design of Loopring protocol in our <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">white-paper</a>. As we proceed with implementation, some details in the white-paper are out-dated. Whenever there are differences, please refer to this website as the latest official update - we are not updating our white-paper often, if ever.</p>
+<h2 id="roles">Roles</h2>
+<p>In Loopring's decentralized exchange ecosystem, there are the multile distinct roles, they jointly provide all functionalities a centralized exchange has to offer. These roles include:</p>
 <ul>
-<li><a href="https://loopring-team.slack.com/messages/C60UCUECV">Loopring Announcement (read-only)</a></li>
-<li><a href="https://loopring-team.slack.com/messages/C6NTLGX3P">Loopring Community (English)</a></li>
-<li><a href="https://loopring-team.slack.com/messages/G77R2BQUV">Loopring Contributors</a></li>
+<li><a href="../projects/protocol/">Protocol smart-contract</a></li>
+<li><a href="../projects/wallet/">Wallets</a></li>
+<li><a href="../projects/relay/">Relays</a></li>
+<li><a href="../projects/ringminer/">Ring-Miners</a></li>
+<li><a href="../projects/tokenization/">Asset Tokenization Services</a></li>
 </ul>
-<p>You may want to talk to Daniel Wang (<a href="mailto:daniel@loopring.org">daniel@loopring.org</a>), Loopring CEO and major developer, about your idea and the way you can help. This is not a prerequisite, however, you can create pull requests at anytime.</p>
-<h2 id="our-git-branching-model">Our Git Branching Model</h2>
-<p>For git repositories that have releases (this one not included), we will adopt <a href="http://nvie.com/posts/a-successful-git-branching-model/">"A Successful Git Branching Model"</a> starting from Nov. 1st, 2017.</p>
-<p><img alt="" src="../img/git-branching-model.png" /></p>
-<h2 id="contributors">Contributors</h2>
-<p>If your pull requests are ever accepted and merged, please create a pull request to put yoruself in this list.</p>
-<ul>
-<li>Fei YUAN -  Reviewed LRC token smart-contract and created an important pull request.</li>
-</ul>
+<p>Each of them will be documented in its own page.</p>
               
             </div>
           </div>
@@ -164,8 +155,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../projects/protocol/" class="btn btn-neutral float-right" title="Protocol">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../projects/tokenization/" class="btn btn-neutral" title="Tokenization Services"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href=".." class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -193,8 +186,10 @@
           <a href="https://github.com/Loopring/documents" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../projects/tokenization/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../projects/protocol/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
