@@ -1,10 +1,12 @@
 
-## Overview
+# The loopring smart contracts
+(A rework is being made)
+
 Loopring Protocol (the Protocol) is a Ethereum smart-contract. It is the core of Loopring ecosystem and offers the following functionalites:
 
 - **Computing each order's current state**
-   
-	When orders are propagated off-chain, they never mutate, which means even when they are partially filled or cancelled, in the peer-to-peer network, different parties still see the same exact orders - otherwise orders need to be re-signed each time they get partially filled or cancelled. The protocol will verify the order's signature against its original state and compute order's current state based on the order's fill history, cancellation records, and its corresponding outgoing address's balance as well ERC20 allowance. All future matching and price/fee calculation is based on order's current states. 
+
+	When orders are propagated off-chain, they never mutate, which means even when they are partially filled or cancelled, in the peer-to-peer network, different parties still see the same exact orders - otherwise orders need to be re-signed each time they get partially filled or cancelled. The protocol will verify the order's signature against its original state and compute order's current state based on the order's fill history, cancellation records, and its corresponding outgoing address's balance as well ERC20 allowance. All future matching and price/fee calculation is based on order's current states.
 
 
 - **Verifying Miner-supplied Values**
@@ -13,7 +15,7 @@ Loopring Protocol (the Protocol) is a Ethereum smart-contract. It is the core of
 
 - **Transfering Tokens for Settlement**
 
-	The protocol will transfer ERC20 tokens between order addresses by using the [TokenTransferDelegate](https://github.com/Loopring/protocol/blob/master/contracts/TokenTransferDelegate.sol). The introduction of such a delegate makes upgrading Loopring protocol easier as all orders only need to authorize this delegate instead of different versions of the protocol. 
+	The protocol will transfer ERC20 tokens between order addresses by using the [TokenTransferDelegate](https://github.com/Loopring/protocol/blob/master/contracts/TokenTransferDelegate.sol). The introduction of such a delegate makes upgrading Loopring protocol easier as all orders only need to authorize this delegate instead of different versions of the protocol.
 
 - **Cancel or Partially Cancel Orders**
 
