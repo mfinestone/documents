@@ -29,7 +29,7 @@ Loopring protocol is open-source at github: [https://github.com/Loopring/protoco
 
 ## Order Rings
 
-supersimmetry {[da447m@yahoo.com](mailto:da447m@yahoo.com)} came up with this 《[Remarks on Loopring](pdf/supersimmetry-loopring-remark.pdf)》 document to explain what order-rings (match-ring) are, when orders can form a valid ring to be filled, and how fill rates are calculated. We really appreciate such an effort and it is worth of a reading. Please be noted in current protocol implementation, the pricing model is the same as in our whitepaper and the above document, but the fee model is different.
+supersimmetry {[da447m@yahoo.com](mailto:da447m@yahoo.com)} came up with this 《[Remarks on Loopring](../pdf/supersimmetry-loopring-remark.pdf)》 document to explain what order-rings (match-ring) are, when orders can form a valid ring to be filled, and how fill rates are calculated. We really appreciate such an effort and it is worth of a reading. Please be noted in current protocol implementation, the pricing model is the same as in our whitepaper and the above document, but the fee model is different.
 
 When impelmented in solidity, Loopring protocol doesn't perform calculating exchange rate or amount, but perform verification of miner-supplied exchange amount for each order (specificily, how much each order should pay to the previous order in the ring). This is beause 1) solidity doens't have support for float number computation, especially `pow(x, 1/n)`, and 2) we prefer math computation to be done by miners to save gas.
 
