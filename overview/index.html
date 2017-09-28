@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Ecosystem - Loopring Documentation</title>
+  <title>Overview - Loopring Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Ecosystem";
+    var mkdocs_page_name = "Overview";
     var mkdocs_page_input_path = "overview.md";
     var mkdocs_page_url = "/overview/";
   </script>
@@ -54,7 +54,7 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Ecosystem</a>
+    <a class="current" href="./">Overview</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#what-is-loopring">What is Loopring</a></li>
@@ -140,7 +140,7 @@
     
       
     
-    <li>Ecosystem</li>
+    <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/Loopring/documents/edit/master/docs/overview.md"
@@ -156,18 +156,18 @@
                 <h1 id="what-is-loopring">What is Loopring</h1>
 <p>Loopring is a decentralized token exchange protocol. It is implemented as an ethereum smart-contract at the core of the loopring decentralized exchange system. Its design allows for several improvements over traditional centralized exchanges:</p>
 <ul>
-<li><strong>Zero Risks Trading:</strong> The tokens stay in the user's wallet and are never locked</li>
-<li><strong>High liquidity:</strong> Orders are ring-matched allowing for high liquidity on any trading pair</li>
-<li><strong>Fairness:</strong> The fee &amp; discount model allows for fairness between all parties involved (Makers, Takers and Miners)</li>
-<li><strong>Weak Supervision:</strong> The whole system is completely decentralised</li>
+<li><strong>Zero Risks Trading:</strong> The tokens stay in the user's wallet and are never locked by orders.</li>
+<li><strong>High liquidity:</strong> Orders are ring-matched allowing for high liquidity on any trading pair.</li>
+<li><strong>Fairness:</strong> The fee &amp; discount model allows for fairness between all parties involved (Makers, Takers and Miners).</li>
+<li><strong>Weak Supervision:</strong> The whole system is completely decentralised.</li>
 </ul>
-<p>You can learn more about the background and general design of the loopring protocol in our <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">white paper</a>.
-Bear in mind that as we proceed with the implementation, some details in the white-paper might become outdated. Whenever there is a difference, please refer to this website as the latest official update.</p>
+<p>You can learn more about the background and general design of the loopring protocol in our <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">whitepaper</a>.
+Bear in mind that as we proceed with the implementation, some details in the whitepaper might become outdated. Whenever there is a difference, please refer to this website as the latest official update.</p>
 <h2 id="why">Why ?</h2>
 <p>The loopring protocol was designed to address numerous issues found in centralized exchanges, for a brief explanation checkout the <a href="./#issues-with-centralized-exchanges">last section</a> of this page.</p>
 <h1 id="ecosystem">Ecosystem</h1>
 <p>This section introduces the key parts of the loopring ecosystem and how they interact with each other. They jointly provide all functionalities a centralized exchange has to offer. For a more in depth explanation of each one of them, follow the links below.</p>
-<p><strong><a href="../projects/wallet/">Wallet</a></strong></p>
+<p><strong><a href="../projects/wallet/">Wallets</a></strong></p>
 <blockquote>
 <p>A common wallet service/interface that gives you access to your tokens and provides you with a way to send orders to the loopring network.</p>
 </blockquote>
@@ -185,7 +185,8 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 </blockquote>
 <p><strong><a href="../projects/tokenization/">Asset Tokenization Services</a></strong></p>
 <blockquote>
-<p>A bridge between assets that cannot be directly traded on loopring. They are centralized services ran by trustworthy companies or organisations. A user could deposit his assets (fiat or tokens from other chains) and get tokens issued. By returning the tokens the user get backs his deposit.</p>
+<p>A bridge between assets that cannot be directly traded on loopring. They are centralized services ran by trustworthy companies or organisations. A user could deposit his assets (fiat or tokens from other chains) and get tokens issued. By returning the tokens the user get backs his deposit. LRC is not a cross-chain exchange protocol, but with Asset Tokenization Services, it is possible to trade Ethereum ERC20 tokens with physicial assets as well as assets on other blockchains.</p>
+<p>Asset Tokenization Services is not part of Loopring project though.</p>
 </blockquote>
 <h2 id="overview">Overview</h2>
 <p>This is the lifecycle of a successful order on the loopring network with an explanation of each step bellow.
@@ -196,11 +197,11 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 </blockquote>
 <p><strong>1 - ERC20 Authorization</strong></p>
 <blockquote>
-<p>The wallet authorizes the loopring smart contracts to handle <em>X</em> amount of the <em>TokenA</em> the user wants to sell. This does not lock the user's tokens. He is free to move them while the order is being processed by the network. If the sender's balance is being checked at some point (by a miner or the loopring contract) and the funds are insufficient, it will be considered as cancelled.</p>
+<p>The wallet authorizes the loopring smart contracts to handle <code>X</code> amount of the <code>TokenA</code> the user wants to sell. This does not lock the user's tokens. He is free to move them while the order is being processed by the network. If the sender's balance is being checked at some point (by a miner or the loopring ) and the funds are insufficient, it will be considered scaled-down. A order being scaled-down is not the same as being cancelled, a scaled-down order will be automatically scaled up to its original size if funds sufficient are deposited to its address, while cancellation is a one way manual operation and cannot be revert.</p>
 </blockquote>
 <p><strong>2 - Sending the order to the network</strong></p>
 <blockquote>
-<p>Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with it's signature to one or more nodes in the network (relay or ring-miner).</p>
+<p>Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay or ring-miner).</p>
 </blockquote>
 <p><strong>3 - Broadcast</strong></p>
 <blockquote>
@@ -209,7 +210,7 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 <p><strong>4 - Ring Miners (order matching)</strong></p>
 <blockquote>
 <p>Ring Miners receive the order and add it to their orderbook. Each one of them tries to fill it fully or partially at the given exchange rate or better by ring-matching it with multiple other orders. The ring-matching is the main reason why the protocol is able to provide high liquidity over any pair. The details of the process are explained in the <a href="../projects/ringminer/">Ring Miners</a> page.
-If the rate is better than the rate the user asked for, the savings are shared amongst all the orders in the ring and is called the Margin Split. For his fee the miner can choose between claiming a share in the Margin Split and give back the LRC to the user or just keep the LRC.</p>
+If the rate is better than the rate the user asked for, the savings are shared amongst all the orders in the ring and is called the Margin Split. For his fee the miner can choose between claiming the Margin Split and give back the LRC to the user or just keep the LRC fee.</p>
 </blockquote>
 <p><strong>5 - Validation &amp; Settlement</strong></p>
 <blockquote>
@@ -221,15 +222,15 @@ If the rate is better than the rate the user asked for, the savings are shared a
 <p>Here is a very simplified view of what happens when you send your tokens to a centralized exchange.</p>
 <p><img alt="" src="../img/protocol/centralized-model.png" /></p>
 <p>In order to use the exchange and trade your tokens, you first have to deposit your tokens in the exchange. Your tokens are sent to the exchange's wallets and it gives you back an IOU (I owe you), which is a proof of debt. Then you trade your IOU with other users IOUs. Finally when you want to withdraw, you give back your IOU to the exchange which then sends you back your tokens to your external wallet address.</p>
-<p><strong>Lack of security</strong></p>
+<p><strong>Lack of Security</strong></p>
 <blockquote>
 <p>In this model, you don't have control over your tokens. It allows for instant transactions on the exchange but it comes with a lot of risks. There are multiple scenarios where you could loose your money (frozen account, exchange shutting down, hacking, developer's mistakes, etc...).</p>
 </blockquote>
-<p><strong>Lack of transparency</strong></p>
+<p><strong>Lack of Transparency</strong></p>
 <blockquote>
 <p>Anything can happen to your tokens when they are on the exchange's wallets. You have no way of knowing what exactly. It is always too late when an exchange goes bankrupt and users never see it coming.</p>
 </blockquote>
-<p><strong>Lack of liquidity</strong></p>
+<p><strong>Lack of Liquidity</strong></p>
 <blockquote>
 <p>You are only able to trade with the exchange own order pools and supported token pairs. If there is not enough volume you can try on an other exchange and if the token pair you want to trade is not supported, you could try making indirect trades with other pairs to get what you want or, again, transfer your funds to an other exchange. Either way you get hit multiple times by fees and you loose money.</p>
 </blockquote>
