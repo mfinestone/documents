@@ -71,20 +71,15 @@
     <a class="current" href="./">Protocol</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#overview">Overview</a></li>
-    
-
-    <li class="toctree-l3"><a href="#order-rings">Order Rings</a></li>
-    
-
-    <li class="toctree-l3"><a href="#exchange-rate-verification">Exchange Rate Verification</a></li>
-    
-
-    <li class="toctree-l3"><a href="#fee-model">Fee Model</a></li>
+    <li class="toctree-l3"><a href="#the-loopring-smart-contracts">The loopring smart contracts</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#the-rationals">The Rationals</a></li>
+            <li><a class="toctree-l4" href="#order-rings">Order Rings</a></li>
+        
+            <li><a class="toctree-l4" href="#exchange-rate-verification">Exchange Rate Verification</a></li>
+        
+            <li><a class="toctree-l4" href="#fee-model">Fee Model</a></li>
         
         </ul>
     
@@ -154,12 +149,13 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="overview">Overview</h2>
+                <h1 id="the-loopring-smart-contracts">The loopring smart contracts</h1>
+<p>(A rework is being made)</p>
 <p>Loopring Protocol (the Protocol) is a Ethereum smart-contract. It is the core of Loopring ecosystem and offers the following functionalites:</p>
 <ul>
 <li>
 <p><strong>Computing each order's current state</strong></p>
-<p>When orders are propagated off-chain, they never mutate, which means even when they are partially filled or cancelled, in the peer-to-peer network, different parties still see the same exact orders - otherwise orders need to be re-signed each time they get partially filled or cancelled. The protocol will verify the order's signature against its original state and compute order's current state based on the order's fill history, cancellation records, and its corresponding outgoing address's balance as well ERC20 allowance. All future matching and price/fee calculation is based on order's current states. </p>
+<p>When orders are propagated off-chain, they never mutate, which means even when they are partially filled or cancelled, in the peer-to-peer network, different parties still see the same exact orders - otherwise orders need to be re-signed each time they get partially filled or cancelled. The protocol will verify the order's signature against its original state and compute order's current state based on the order's fill history, cancellation records, and its corresponding outgoing address's balance as well ERC20 allowance. All future matching and price/fee calculation is based on order's current states.</p>
 </li>
 <li>
 <p><strong>Verifying Miner-supplied Values</strong></p>
@@ -167,7 +163,7 @@
 </li>
 <li>
 <p><strong>Transfering Tokens for Settlement</strong></p>
-<p>The protocol will transfer ERC20 tokens between order addresses by using the <a href="https://github.com/Loopring/protocol/blob/master/contracts/TokenTransferDelegate.sol">TokenTransferDelegate</a>. The introduction of such a delegate makes upgrading Loopring protocol easier as all orders only need to authorize this delegate instead of different versions of the protocol. </p>
+<p>The protocol will transfer ERC20 tokens between order addresses by using the <a href="https://github.com/Loopring/protocol/blob/master/contracts/TokenTransferDelegate.sol">TokenTransferDelegate</a>. The introduction of such a delegate makes upgrading Loopring protocol easier as all orders only need to authorize this delegate instead of different versions of the protocol.</p>
 </li>
 <li>
 <p><strong>Cancel or Partially Cancel Orders</strong></p>
