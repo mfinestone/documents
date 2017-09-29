@@ -51,7 +51,7 @@ Lets say a order specified 10LRC as fee, assume this order is fully filled and s
 
 If `f` is LRC fee, `x` is the split, then miner's income is `y = max(f, x-f)`. If we plot this function, we have:
 
-![](img/fee-model.jpg)
+![](../img/fee-model.jpg)
 ### The Rationals
 
 The orange line represents the split fee model, and the blue line represents our current fee model. As you can see:
