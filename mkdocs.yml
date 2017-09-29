@@ -11,6 +11,8 @@ pages:
         - 'Protocol': projects/protocol.md
         - 'Relays': projects/relay.md
         - 'Ring Miners': projects/ringminer.md
-        - 'Wallets': projects/wallet.md
+        - 'Wallets': 
+            - Overview: projects/wallet.md
+            - 'Loopring Wallet PRD': projects/wallet/prd.md
         - 'Tokenization Services': projects/tokenization.md
     - Contribution: contribution.md
