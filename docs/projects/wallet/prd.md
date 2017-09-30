@@ -1,8 +1,8 @@
 # Loopring Wallet PRD
 
-Author: Daniel Wang <daniel@loopring.org>
+Author: Daniel Wang {<daniel@loopring.org>}
 
-Version: Draft
+Version: work-in-progress
 
 ## Overview
 This PRD is created for easier communicating with wallet UI designers and developpers. We do not plan to update this document constantly after the initial release of the wallet.
@@ -45,16 +45,16 @@ In this section we will provide as many details as we can for each module, submo
 - PRIORITY: high
 - SUB-MODULES:
     - **my-asset-submodule**:
-    - **my-orders-submodule**:
-    - **my-trading-records-submodule**:
+    - **my-order-list-submodule**:
+    - **my-trading-record-list-submodule**:
 
 ### loopring-browser-module
 - DESCRIPTION:
 - PRIORITY: high
 - SUB-MODULES:
-    - **all-orders-submodule**:
-    - **all-trading-records-submodule**:
-    - **all-rings-submodule**:
+    - **order-list-submodule**:
+    - **trading-record-list-submodule**:
+    - **ring-list-submodule**:
     - **single-order-submodule**:
     - **single-traing-record-submodule**:
     - **single-ring-subbmodule**:
@@ -70,14 +70,14 @@ In this section we will provide as many details as we can for each module, submo
 - PRIORITY: low
 - DATA: a list of transactions. Each transaction should be displayed using its raw JSON transaction together with its signature. An example of raw JSON transation looks like:
 
-    ```json
-    {"nonce":"0xcd","gasPrice":"0x04e3b29200","gasLimit":"0x5208","to":"0xa3ae668b6239fa3eb1dc26daabb03f244d0259f0","value":"0x038d7ea4c68000","data":"","chainId":1}
+    ```
+{"nonce":"0xcd","gasPrice":"0x04e3b29200","gasLimit":"0x5208","to":"0xa3ae668b6239fa3eb1dc26daabb03f244d0259f0","value":"0x038d7ea4c68000","data":"","chainId":1}
     ```
 
     and its signature looks like:
     
     ```
-    0xf86c81cd8504e3b2920082520894a3ae668b6239fa3eb1dc26daabb03f244d0259f087038d7ea4c680008026a0eda61d59d15b4025b873fbf812020999d1d2115e8e4d3258c79969ee6ea15700a038c6449d69dd38602f48247b80ef8d9f99b4afa51f800ef38cdfc06d0d2865f7
+0xf86c81cd8504e3b2920082520894a3ae668b6239fa3eb1dc26daabb03f244d0259f087038d7ea4c680008026a0eda61d59d15b4025b873fbf812020999d1d2115e8e4d3258c79969ee6ea15700a038c6449d69dd38602f48247b80ef8d9f99b4afa51f800ef38cdfc06d0d2865f7
     ```
     
     Their text should automatically wrap to fit the screen.
