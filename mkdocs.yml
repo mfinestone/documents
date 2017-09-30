@@ -13,6 +13,6 @@ pages:
         - 'Ring Miners': projects/ringminer.md
         - 'Wallets': 
             - Overview: projects/wallet.md
-            - 'Loopring Wallet PRD': projects/wallet/prd.md
+            - 'The PRD (draft)': projects/wallet/prd.md
         - 'Tokenization Services': projects/tokenization.md
     - Contribution: contribution.md

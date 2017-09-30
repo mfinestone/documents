@@ -1,8 +1,7 @@
-# Loopring Wallet PRD
+authored by: daniel@loopring.org, status: work-in-progress
 
-Author: Daniel Wang {<daniel@loopring.org>}
+[TOC]
 
-Version: work-in-progress
 
 ## Overview
 This PRD is created for easier communicating with wallet UI designers and developpers. We do not plan to update this document constantly after the initial release of the wallet.
@@ -13,9 +12,9 @@ In the rest of the doc, we will split requirements into `modules`, each module m
 
 
 ## Positioning of Product
-[TODO]
+TODO
 
-## UX/UI Design Requirements
+## General Design Requirements
 
 We expect the UX design to be straightforward so that users who have limited experience of centralized exchange can use this product for common operations without a manual.
 
@@ -30,6 +29,10 @@ All icons should be vector images.
 ## Modules and Requirements
 
 In this section we will provide as many details as we can for each module, submodule, and components. Please note that these information is high likely to change until this document's version is marked as `release-x.x`. 
+
+
+
+
 
 ### generate-and-unlock-wallet-module
 - DESCRIPTION: when no wallet is unlocked, this module will show up as the default module; after user successfully unlucked a wallet, this module will hide; it will show up again if session timed out or user terminates the current session. Within this module, a user decides to proceed to generate a new wallet or to unlock an existing wallet, by following the two respective submodules. When a user move away from this module and come back, this module should display its initial state, instead of showing the half-way unlocking UI.
@@ -59,7 +62,7 @@ In this section we will provide as many details as we can for each module, submo
     - **single-traing-record-submodule**:
     - **single-ring-subbmodule**:
 
-### markets-module
+### market-list-module
 
 ### market-module
 - DESCRIPTION: 

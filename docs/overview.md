@@ -1,4 +1,8 @@
-# What is Loopring
+
+
+[TOC]
+
+## What is Loopring
 
 Loopring is a decentralized token exchange protocol. It is implemented as an ethereum smart-contract at the core of the loopring decentralized exchange system. Its design allows for several improvements over traditional centralized exchanges:
 
@@ -10,10 +14,12 @@ Loopring is a decentralized token exchange protocol. It is implemented as an eth
 You can learn more about the background and general design of the loopring protocol in our [whitepaper](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf).
 Bear in mind that as we proceed with the implementation, some details in the whitepaper might become outdated. Whenever there is a difference, please refer to this website as the latest official update.
 
+
+
 ## Why ?
 The loopring protocol was designed to address numerous issues found in centralized exchanges, for a brief explanation checkout the [last section](overview.md#issues-with-centralized-exchanges) of this page.
 
-# Ecosystem
+## Ecosystem
 
 This section introduces the key parts of the loopring ecosystem and how they interact with each other. They jointly provide all functionalities a centralized exchange has to offer. For a more in depth explanation of each one of them, follow the links below.
 
@@ -34,17 +40,17 @@ This section introduces the key parts of the loopring ecosystem and how they int
 
 > Asset Tokenization Services is not part of Loopring project though.
 
-## Overview
+## Flow
 This is the lifecycle of a successful order on the loopring network with an explanation of each step bellow.
 ![](./img/diagrams/loopring-overview.png)
 
-**0 - The user wants to make a trade**
+**0 - Prepare for Trading**
 >The user wants to exchange `X` amount of `TokenA` for `Y` amount of `TokenB`. The current rate and orderbook for this pair can be found on multiple sources provided by the relays or any other interface hooked up on the network (e.g. orderbook browsers). Once he is ready, he uses his wallet interface to enter the details of his order and submits it. An amount of LRC can be added to the order as a fee for miners. Orders with a higher LRC fee have a better chance to be processed earlier by miners.
 
 **1 - ERC20 Authorization**
 >The wallet authorizes the loopring smart contracts to handle `X` amount of the `TokenA` the user wants to sell. This does not lock the user's tokens. He is free to move them while the order is being processed by the network. If the sender's balance is being checked at some point (by a miner or the loopring ) and the funds are insufficient, it will be considered scaled-down. A order being scaled-down is not the same as being cancelled, a scaled-down order will be automatically scaled up to its original size if funds sufficient are deposited to its address, while cancellation is a one way manual operation and cannot be revert.
 
-**2 - Sending the order to the network**
+**2 - Order Submission**
 >Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay or ring-miner).
 
 **3 - Broadcast**
@@ -60,7 +66,7 @@ If the rate is better than the rate the user asked for, the savings are shared a
 Some details were ommited to ease the understanding of what is happening when an order enters the loopring network. To deepen your understanding of the protocol (order cancelling, ring-matching, orderbooks and trade history synching, etc...) we advise you to take a look at the documentation of the key parts of the ecosystem [listed above](overview.md#ecosystem).
 
 
-# Issues with centralized exchanges
+## Issues with Centralized Exchanges
 To better understand the need of a system such as loopring, we first need to point the issues in the centralized exchanges model.
 
 Here is a very simplified view of what happens when you send your tokens to a centralized exchange.
