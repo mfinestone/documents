@@ -241,6 +241,7 @@
 </tr>
 </tbody>
 </table>
+<p>We called the above model <strong>Unidirectional Order Model</strong>, or UDOM for short. To learn more about UDOM, check out our <a href="https://medium.com/@loopring/looprings-uni-directional-order-model-510067377fe9">medium post</a>.</p>
 <p>The exchange rate <code>r</code> of the order is determined using the following formula <code>r = amountS/amountB</code>. When a miner does the ring-matching there is a possibility that he finds you a better rate that gets you more <code>tokenB</code> than the <code>amountB</code> you specified. But, if the <code>buyNoMoreThanAmountB</code> flag is set, the LSC will make sure that you still get exactly <code>amountB</code> of <code>tokenB</code>.</p>
 <blockquote>
 <p><strong>Example</strong>: with <code>amountS = 10</code> and <code>amountB = 2</code>, <code>r = 10/2 = 5</code>. This means that you are willing to sell <code>5 tokenS for each tokenB</code>. The miner does the ring-matching and <code>finds you a rate of 4</code>, topping the amount he could get you to <code>2.5 tokensB instead of 2</code>. You only wanted 2 tokensB and set the <code>buyNoMoreThanAmountB flag to true</code>. The LSC takes that into consideration and still makes the transaction at a rate of 4 and you ended up selling <code>4 tokenS for each tokenB</code>, effectively <code>saving 2 tokenS</code>. Keep in mind that this does not take into account the miner fees.</p>
