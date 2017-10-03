@@ -49,6 +49,8 @@ Relevant variables of an order's parameters (for a complete list of order parame
 | lrcFee | Max amount of LRC to pay to the miner |
 | marginSplitPercentage | The percentage of margin paid to the miner (when a better rate is found) |
 
+We called the above model **Unidirectional Order Model**, or UDOM for short. To learn more about UDOM, check out our [medium post](https://medium.com/@loopring/looprings-uni-directional-order-model-510067377fe9).
+
 The exchange rate `r` of the order is determined using the following formula `r = amountS/amountB`. When a miner does the ring-matching there is a possibility that he finds you a better rate that gets you more `tokenB` than the `amountB` you specified. But, if the `buyNoMoreThanAmountB` flag is set, the LSC will make sure that you still get exactly `amountB` of `tokenB`.
 
 > **Example**: with `amountS = 10` and `amountB = 2`, `r = 10/2 = 5`. This means that you are willing to sell `5 tokenS for each tokenB`. The miner does the ring-matching and `finds you a rate of 4`, topping the amount he could get you to `2.5 tokensB instead of 2`. You only wanted 2 tokensB and set the `buyNoMoreThanAmountB flag to true`. The LSC takes that into consideration and still makes the transaction at a rate of 4 and you ended up selling `4 tokenS for each tokenB`, effectively `saving 2 tokenS`. Keep in mind that this does not take into account the miner fees.
