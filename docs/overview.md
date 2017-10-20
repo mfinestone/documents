@@ -2,7 +2,7 @@
 
 Loopring is a decentralized token exchange protocol. It is implemented as an ethereum smart-contract at the core of the loopring decentralized exchange system. Its design allows for several improvements over traditional centralized exchanges:
 
-* **Zero Risks Trading:** The tokens stay in the user's wallet and are never locked by orders.
+* **Reduced Counterparty & Exchange Risk:** Removing the risk of depositing and storing digital assets on a third party exchange and tokens are never locked by orders.
 * **High liquidity:** Orders are ring-matched allowing for high liquidity on any trading pair.
 * **Fairness:** The fee & discount model allows for fairness between all parties involved (Makers, Takers and Miners).
 * **Weak Supervision:** The whole system is completely decentralised.
