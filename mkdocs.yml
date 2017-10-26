@@ -5,12 +5,31 @@ repo_url: https://github.com/Loopring/documents
 site_description: Loopring - Decentralized Token Exchange Protocol
 pages:
     - About: index.md
-    - Overview: overview.md
-    - LRC Token: token.md
-    - Projects:
-        - 'Protocol': projects/protocol.md
-        - 'Relays': projects/relay.md
-        - 'Ring Miners': projects/ringminer.md
-        - 'Wallets': projects/wallet.md
-        - 'Tokenization Services': projects/tokenization.md
-    - Contribution: contribution.md
+    - English:
+        - Overview: English/overview.md
+        - LRC Token: English/token.md
+        - 'Protocol': English/projects/protocol.md
+        - 'Relays': English/projects/relay.md
+        - 'Ring Miners': English/projects/ringminer.md
+        - 'Wallets': English/projects/wallet.md
+        - 'Tokenization Services': English/projects/tokenization.md
+        - Contribution: English/contribution.md
+    # - Portuguese:
+    #     - Overview: Portuguese/overview.md
+    #     - LRC Token: Portuguese/token.md
+    #     - 'Protocol': Portuguese/projects/protocol.md
+    #     - 'Relays': Portuguese/projects/relay.md
+    #     - 'Ring Miners': Portuguese/projects/ringminer.md
+    #     - 'Wallets': Portuguese/projects/wallet.md
+    #     - 'Tokenization Services': Portuguese/projects/tokenization.md
+    #     - Contribution: Portuguese/contribution.md
+
+    # - 中文:
+    #     - 概览: Chinese/overview.md
+    #     - LRC代币: Chinese/token.md
+        # - 'Protocol': Chinese/projects/protocol.md
+        # - 'Relays': Chinese/projects/relay.md
+        # - 'Ring Miners': Chinese/projects/ringminer.md
+        # - 'Wallets': Chinese/projects/wallet.md
+        # - 'Tokenization Services': Chinese/projects/tokenization.md
+        # - 社区贡献: Chinese/contribution.md
