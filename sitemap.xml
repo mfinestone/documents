@@ -4,23 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/overview/</loc>
-     <lastmod>2017-10-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/token/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,43 +12,53 @@
     
         
     <url>
-     <loc>/projects/protocol/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <loc>/English/overview/</loc>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/projects/relay/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <loc>/English/token/</loc>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/projects/ringminer/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <loc>/English/projects/protocol/</loc>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/projects/wallet/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <loc>/English/projects/relay/</loc>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/projects/tokenization/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <loc>/English/projects/ringminer/</loc>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
-    
-
-    
     <url>
-     <loc>/contribution/</loc>
-     <lastmod>2017-10-04</lastmod>
+     <loc>/English/projects/wallet/</loc>
+     <lastmod>2017-10-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/English/projects/tokenization/</loc>
+     <lastmod>2017-10-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/English/contribution/</loc>
+     <lastmod>2017-10-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
