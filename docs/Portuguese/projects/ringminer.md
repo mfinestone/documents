@@ -1,3 +1,0 @@
-# Ring Miners
-
-In construction.

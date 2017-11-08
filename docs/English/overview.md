@@ -21,10 +21,7 @@ This section introduces the key parts of the loopring ecosystem and how they int
 >A common wallet service/interface that gives you access to your tokens and provides you with a way to send orders to the loopring network.
 
 **[Relays](./projects/relay.md)**
->Maintains public orderbooks and trade history. Broadcasts new orders to other relays and ring miners.
-
-**[Ring Miners](./projects/ringminer.md)**
->Tries to determine a way to fulfill received orders by ring-matching them. This is computational heavy and is done completly off-chain. The process produces chains of trades involving at least 2 tokens, we call that an [order ring](./projects/protocol.md#order-ring).
+>Maintains public orderbooks and trade history. Broadcasts new orders to other relays and ring miners. Ring-mining is a feature of relays. It is computational heavy and is done completly off-chain. The process produces chains of trades involving at least 2 tokens, we call that an [order ring](./projects/protocol.md#order-ring).
 
 **[Loopring Protocol Smart Contracts](./projects/protocol.md)**
 >A set of smart contracts that checks ring-matched orders received from the miners, do the token transfers on behalf of the users, incentivize the miners and emit events. The relays/order browsers listen to these events to keep their orderbooks and trade history up to date.
@@ -45,13 +42,13 @@ This is the lifecycle of a successful order on the loopring network with an expl
 >The wallet authorizes the loopring smart contracts to handle `X` amount of the `TokenA` the user wants to sell. This does not lock the user's tokens. He is free to move them while the order is being processed by the network. If the sender's balance is being checked at some point (by a miner or the loopring ) and the funds are insufficient, it will be considered scaled-down. A order being scaled-down is not the same as being cancelled, a scaled-down order will be automatically scaled up to its original size if funds sufficient are deposited to its address, while cancellation is a one way manual operation and cannot be revert.
 
 **2 - Sending the order to the network**
->Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay or ring-miner).
+>Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay).
 
 **3 - Broadcast**
 >On the reception of the order, relays update their public orderbook and broadcast the order to other relays as well as ring miners to start the order processing as quickly as possible.
 
 **4 - Ring Miners (order matching)**
->Ring Miners receive the order and add it to their orderbook. Each one of them tries to fill it fully or partially at the given exchange rate or better by ring-matching it with multiple other orders. The ring-matching is the main reason why the protocol is able to provide high liquidity over any pair. The details of the process are explained in the [Ring Miners](./projects/ringminer.md) page.
+>Ring Miners receive the order and add it to their orderbook. Each one of them tries to fill it fully or partially at the given exchange rate or better by ring-matching it with multiple other orders. The ring-matching is the main reason why the protocol is able to provide high liquidity over any pair.
 If the rate is better than the rate the user asked for, the savings are shared amongst all the orders in the ring and is called the Margin Split. For his fee the miner can choose between claiming the Margin Split and give back the LRC to the user or just keep the LRC fee.
 
 **5 - Validation & Settlement**

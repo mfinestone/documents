@@ -10,10 +10,17 @@ pages:
         - LRC Token: English/token.md
         - 'Protocol': English/projects/protocol.md
         - 'Relays': English/projects/relay.md
-        - 'Ring Miners': English/projects/ringminer.md
         - 'Wallets': English/projects/wallet.md
         - 'Tokenization Services': English/projects/tokenization.md
         - Contribution: English/contribution.md
+    - 日语:
+        - Overview: Japanese/overview.md
+        - LRC Token: Japanese/token.md
+        - 'Protocol': Japanese/projects/protocol.md
+        - 'Relays': Japanese/projects/relay.md
+        - '財布': Japanese/projects/wallet.md
+        - 'トークン化サービス': Japanese/projects/tokenization.md
+        - 貢献: Japanese/contribution.md
     # - Portuguese:
     #     - Overview: Portuguese/overview.md
     #     - LRC Token: Portuguese/token.md

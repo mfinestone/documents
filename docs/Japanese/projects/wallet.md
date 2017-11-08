@@ -1,3 +1,3 @@
-# Ring Miners
+# Wallets
 
 In construction.
