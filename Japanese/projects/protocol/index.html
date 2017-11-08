@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Protocol - Loopring Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Protocol";
+    var mkdocs_page_input_path = "Japanese/projects/protocol.md";
+    var mkdocs_page_url = "/Japanese/projects/protocol/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Loopring Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">English</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../English/overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../English/token/">LRC Token</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../English/projects/protocol/">Protocol</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../English/projects/relay/">Relays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../English/projects/wallet/">Wallets</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../English/projects/tokenization/">Tokenization Services</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../English/contribution/">Contribution</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">日语</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../token/">LRC Token</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Protocol</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#loopring">Loopring スマートコントラクト</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_1">注文の管理</a></li>
+        
+            <li><a class="toctree-l4" href="#_2">注文の詳細な分析</a></li>
+        
+            <li><a class="toctree-l4" href="#_5">マイナーが提供するデータの検証</a></li>
+        
+            <li><a class="toctree-l4" href="#_11">リング決済</a></li>
+        
+            <li><a class="toctree-l4" href="#_12">トランザクション</a></li>
+        
+            <li><a class="toctree-l4" href="#_14">発生イベント</a></li>
+        
+            <li><a class="toctree-l4" href="#_15">詐欺や攻撃からの保護</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../relay/">Relays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../wallet/">財布</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tokenization/">トークン化サービス</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contribution/">貢献</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Loopring Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>日语 &raquo;</li>
+        
+      
+    
+    <li>Protocol</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/Loopring/documents/edit/master/docs/Japanese/projects/protocol.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="loopring">Loopring スマートコントラクト</h1>
+<p>Loopringスマートコントラクトは、Loopringプロトコルを実装した一連のEthereumコントラクトです。このドキュメントでは、それらが提供する機能を下記の構成で説明します。</p>
+<ul>
+<li><a href="./#management-of-orders">注文の管理</a><ul>
+<li><a href="./#anatomy-of-an-order">注文の詳細な分析</a></li>
+<li><a href="./#full-or-partial-cancellation">完全または部分的なキャンセル</a></li>
+<li><a href="./#fill-and-cancellation-tracking">約定とキャンセルの追跡</a></li>
+</ul>
+</li>
+<li><a href="./#verification-of-miner-supplied-data">マイナーが提供するデータの検証</a><ul>
+<li><a href="./#order-ring">注文リング</a></li>
+<li><a href="./#order-ring-validation">注文リングの検証</a><ul>
+<li><a href="./#sub-loop-checking">サブループの確認</a></li>
+<li><a href="./#fill-rate-checking">約定レート確認</a></li>
+<li><a href="./#order-scaling">注文スケーリング</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="./#ring-settlement">リング決済</a><ul>
+<li><a href="./#transactions">トランザクション</a></li>
+<li><a href="./#fee-model">手数料モデル</a></li>
+</ul>
+</li>
+<li><a href="./#emitted-events">発生イベント</a></li>
+<li><a href="./#fraud-and-attack-protections">詐欺と攻撃からの保護</a><ul>
+<li><a href="./#ring-filch">リングフィルチュ</a></li>
+<li><a href="./#denial-of-service">サービスの拒否</a></li>
+<li><a href="./#massive-tiny-order-attack">大規模な小型注文攻撃</a></li>
+<li><a href="./#insufficient-balance">残高不足</a></li>
+</ul>
+</li>
+</ul>
+<p>コードはオープンソースで<a href="https://github.com/Loopring/protocol">github</a>から入手できます。</p>
+<p>このドキュメントでは、LoopringスマートコントラクトをLCSと言及します。<a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">ホワイトペーパー</a>およびSupersimmetry氏{<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>}の<a href="../../pdf/supersimmetry-loopring-remark.pdf">Loopringの所見</a>で、ここで使用されている計算と数式に関してさらに読むことができます。現状のプロトコルの実装におけるプライシングモデルはホワイトペーパーおよびSupersimmetry氏のドキュメントと同様ですが、手数料モデルは異なるということに注意してください。</p>
+<h2 id="_1">注文の管理</h2>
+<p>LSCの機能を理解するために、まずは注文の定義、ユーザーが利用可能な操作、および現在の注文ステータスの追跡方法を見ていく必要があります。</p>
+<h2 id="_2">注文の詳細な分析</h2>
+<p>注文とは、マーケットでのユーザーの意図を記述するデータの集まりです。注文の出どころを保証するため、ユーザーのプライベートキーを使って、<code>注文パラメータのハッシュで署名されます</code>。署名はネットワーク上の注文に沿って送信されます。これは、送信者のアドレスを検証するために、注文がライフタイムにわたり<code>不変</code>のままにすることを必要とします。<br/>
+<code>Signature = ECDSA(SHA3(order_params))</code></p>
+<p>注文が決して変更されない場合でも、LSCは<a href="./#transactions">現在の状態を計算する</a>ことが可能です。</p>
+<p>注文のパラメータに関連する変数(注文のパラメータの完全な一覧は、<a href="https://github.com/Loopring/protocol/blob/ef5290d59daa7be4eee450b215d6a50ca9d3492d/contracts/LoopringProtocol.sol#L39">コード</a>を参照してください)：</p>
+<table>
+<thead>
+<tr>
+<th>データ</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>所有者（署名者）のアドレス</td>
+</tr>
+<tr>
+<td>tokenS</td>
+<td>売却するトークン（トークンS）</td>
+</tr>
+<tr>
+<td>tokenB</td>
+<td>購入するトークン（トークンB）</td>
+</tr>
+<tr>
+<td>amountS</td>
+<td>トークンSの売却額（金額S）</td>
+</tr>
+<tr>
+<td>amountB</td>
+<td>トークンBの購入額（金額B）</td>
+</tr>
+<tr>
+<td>buyNoMoreThanAmountB</td>
+<td>下記を参照</td>
+</tr>
+<tr>
+<td>ttl</td>
+<td>注文が期限切れになるまでの秒数（time to live）</td>
+</tr>
+<tr>
+<td>lrcFee</td>
+<td>マイナーに支払うLRCの最大金額</td>
+</tr>
+<tr>
+<td>marginSplitPercentage</td>
+<td>(より良いレートが見つかった場合の)マイナーに支払ったマージンの割合</td>
+</tr>
+</tbody>
+</table>
+<p>私たちは、上記のモデルを単方向注文モデル、略してUDOMと呼びました。UDOMについてさらに学ぶには、私たちの<a href="https://medium.com/@loopring/looprings-uni-directional-order-model-510067377fe9">mediumの投稿</a>を確認してください。</p>
+<p>注文の取引レート<code>r</code>は、次の数式<code>r = amountS/amountB</code>を使って決定されます。マイナーがリングマッチングをする場合、あなたが指定した<code>amountB</code>よりも多く<code>tokenB</code>を得る、より良いレートを見つける可能性があります。しかし、<code>buyNoMoreThanAmountB</code>フラグがセットされていれば、LSCは、やはり正確に<code>amountB</code>の<code>tokenB</code>を取得することを保証します。</p>
+<blockquote>
+<p><strong>例</strong>：<code>amountS = 10</code>および<code>amountB = 2</code>、<code>r = 10/2 = 5</code>。これは、あなたが<code>tokenB毎に5つのtokenS</code>を売却する意思があることを意味します。マイナーは、リングマッチイングを行い、あなたに<code>2の代わりに2.5の tokenB</code>を得ることができる金額をトッピングし、<code>4のレートを見つけます</code>。あなたは2つの<code>tokenB</code>だけを必要としており、<code>buyNoMoreThanAmountBフラグをtrue</code>に設定します。LSCはそれを考慮し、4のレートでトランザクションを作成し、あなたは各 <code>tokenBに対して4つのtokenS</code>を売却し、<code>2つの tokenS を効果的に節約しました</code>。これはマイナーの手数料を考慮していないことに注意してください。</p>
+</blockquote>
+<h3 id="_3">完全または部分的なキャンセル</h3>
+<p>ユーザは、注文に関する詳細およびキャンセルする金額を含む特別なトランザクションをLSCに送信することで、一部または全部をキャンセルすることができます。LSCは、これを考慮に入れ、キャンセルする金額を保管し、<code>OrderCancelled</code>イベントをネットワークに発行します。</p>
+<h3 id="_4">約定とキャンセルの追跡</h3>
+<p>LSCは、注文のハッシュを識別子として使用し、その値を格納することで、約定およびキャンセルの金額を追跡し続けます。このデータは一般にアクセス可能で、データ変更時に<code>OrderCancelled</code> / <code>OrderFilled</code>イベントが発行されます。</p>
+<p>この追跡は、<a href="./#ring-settlement">リング決済</a>のステップでのLSCに役立ちます。</p>
+<h2 id="_5">マイナーが提供するデータの検証</h2>
+<p>このセクションでは、LSCがマイナーから受け取る予定のものと、データを検証するために取られるステップについて説明します。</p>
+<h3 id="_6">注文リング</h3>
+<p>LSCは、マイナーから注文リングを受け取ることを期待しています。1つの注文リングは、希望の交換レートまたはそれ以上でマッチングするようリンクされた、複数の注文です。例として下図を参照してください。</p>
+<p><img alt="" src="../../img/diagrams/order-ring.png" /></p>
+<p>売却する各注文のトークンは、次に購入する注文のトークンであることに注意してください。これは、反対のペアの注文をマッチングさせることなく、各注文がトークンを効果的に売買できるよう、ループを作成します。</p>
+<p>1つのリングは、すべてのトランザクションがユーザによって指定されたオリジナルのものと同等またはそれ以上の交換レートで行われる場合に有効とされます。</p>
+<blockquote>
+<p><strong>例</strong>：ダイアグラムの上記のリングが有効かどうか確認しましょう。
+<code>0.2 * 14 * 0.5 = 1.4</code>の場合、結果は1より大きいため取引可能でなければなりません。</p>
+</blockquote>
+<h3 id="_7">注文リングの検証</h3>
+<p>LSCは、交換レートや金額の計算を行いませんが、マイナーが提供した、これらの値を検証する必要があります。これは、主に2つの理由でマイナーによって行われます。Solidityは浮動小数点演算、特に<code>pow(x, 1/n)</code>をサポートしておらず、また、計算はオフチェインで行いガスを節約することが望まれています。</p>
+<p>次のセクションでは、注文リングの数学的検証について説明します。このページの冒頭に記載されているSupersimmetry氏のドキュメントを補足として確認することをおすすめします。</p>
+<h4 id="_8">サブループチェック</h4>
+<p>このステップは、<a href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">カバー付き金利裁定取引</a>を防止します。有効なリングがマイナーによって発見されると、マイナーはゼロリスクでカバー付き裁定取引を達成するために、他の注文を追加するよう誘惑される可能性があります。
+これはLoopringにおいて、マイナーからの不正な行為とみなされます。</p>
+<p>以下の図は、2つの注文が追加されたかつて有効だったリングを示しています。 
+<img alt="" src="../../img/diagrams/order-ring-sub-loop.png" /></p>
+<p>これを防ぐために、Loopringでは<strong>有効なループにサブループを含めることはできないこと</strong>を要します。これを確認する非常に簡単な方法があります：<code>1つのトークンは購入または売却のポジションで2回存在できない</code>というものです。上の図では、ARKが売却するトークンとして2回および購入するトークンとして2回含まれていることがわかります。</p>
+<h3 id="_9">約定レートの確認</h3>
+<p>このページの上記理由により、リング内のトランザクションのレート計算はマイナーによって行われます。したがって、LSCはそれらが正しいことを確認する必要があります。</p>
+<p>まず、各注文についてマイナーが提供した売却レートが、少なくともユーザによって設定された売却レートに対して等しいかそれ以下であることを検証します。これはユーザが、トランザクションの際に、少なくともaskまたはそれ以上の交換レートを得ることを意味します。</p>
+<p>交換レートが確認されたら、公平性を確保するため、すべての注文に対して、すべてのマージン（ディスカウント）が同じ割合であることを確認します。</p>
+<h3 id="_10">注文のスケーリング</h3>
+<p>注文は次のようにスケーリングされます。
+<em> 約定およびキャンセルされた金額の履歴
+</em> 送信者の口座の現在の残高</p>
+<p>このプロセスでは、上記の特性に従って、約定される最小の金額で注文を探し、リング内のすべてのトランザクションをスケーリングするための参照に使用します。</p>
+<blockquote>
+<p><strong>例</strong>：元の注文と比較して最も少ない約定金額を5%とすると、リング内のすべてのトランザクションは5%に縮小されます。トランザクションが完了したら、残りの約定されるべき最も少ない金額の注文は完全に約定される必要があります。</p>
+</blockquote>
+<h2 id="_11">リング決済</h2>
+<p>以前の確認ですべてOKなら、トランザクションが作成されます。</p>
+<h2 id="_12">トランザクション</h2>
+<p>トランザクションを作成するため、LSCは<code>TokenTransferDelegate</code>スマートコントラクトを使用します。このデリゲートを導入すると、すべての注文がデリゲートを許可するだけで済むので、異なるプロトコルバージョンではなく、プロトコルのスマートコントラクトのアップグレードを容易にします。</p>
+<p>リング内の各注文において、toksnSの支払いは前の注文に対して発生します。そして、マイナーにより選択された手数料モデルに応じて、マイナーの手数料が支払われます。モデルがLRC手数料の場合、手数料が支払われた後の残りの金額が注文の所有者に返されます。最後に、<code>OrderFilled</code>イベントが発生します。</p>
+<p>すべてのトランザクションが作成されると、<code>RingMined</code>イベントが発生します。</p>
+<h3 id="_13">手数料モデル</h3>
+<p>このセクションでは、Loopringの現在の手数料モデルについて説明します。補足として、Daniel氏の<a href="https://medium.com/@loopring/remarks-on-looprings-fee-model-7b6713f59fb7">mediumの記事</a>について読むことをおすすめします。</p>
+<p>現在の手数料モデルでは、マイナーは２つの選択肢があります。
+ユーザーが注文を作成するとき、マイナーに支払う手数料のLRCの最大値と、マイナーが請求できる注文のマージンのパーセンテージを指定します。これは、マージン分割と呼びます。どちらを選択するかの決定は、マイナーに委ねられます。</p>
+<p>マージン分割の表現：</p>
+<p><img alt="" src="../../img/diagrams/margin-split.png" /></p>
+<p>マイナーがリングのマージンが小さすぎると判断した場合、LRC手数料を選択します。反対に、マージンが十分であり、結果として生じるマージン分割がLRC手数料以上の価値がある場合は、マージン分割を選択します。</p>
+<p>しかし、ここで一ひねりがあります。マイナーがマージン分割を選択する場合、ユーザがトランザクションのためにマイナーに支払う予定の手数料と、同額の料金をユーザに支払う必要があります。これは、マイナーがマージン分割を選択する閾値を、注文のLRC手数料の2倍に上げ、LRC手数料の選択に重み付けを行います。</p>
+<p>マイナーの視点からみると、低いマージンのリングで一定の収入を得ることができますが、大きなマージンのリングからの収入が少なくなるという欠点があります。市場が成長し、成熟していくにつれ、高いマージンのリングが少なくなることが予想され、手数料モデルはその未来に基づいています。</p>
+<p>以下のグラフが結論です：</p>
+<p><img alt="" src="../../img/fee-model.png" /></p>
+<ul>
+<li>fはLRC手数料</li>
+<li>xはマージン分割</li>
+<li>yはマイナーの収入</li>
+</ul>
+<p><code>f</code>がLRC手数料、および<code>x</code>がマージン分割の場合、マイナーの収入<code>y</code>は、<code>y = max(f, x-f)</code>で、青線が得られます。</p>
+<p>注文に関して指定されたLRC手数料が0の場合、方程式は<code>y = max(0, x - 0)</code>となり、<code>y = x</code>に単純化され、オレンジ色の線が得られます。</p>
+<p>これから次の結果を得ます：
+- <code>マージン分割が0</code>の場合、マイナーはLRC手数料を選択することで、インセンティブを得られます。
+- <code>LRC手数料が0</code>の場合、これはオレンジ色の線で、収入は一般的なモデルに基づきます。
+- <code>マージン分割所得</code>が<code>LRC手数料の2倍</code>以上になると、マイナーはマージン分割を選択します。</p>
+<p><code>LRC手数料が0でない</code>場合、マイナーが選択するオプションに関わらず、マイナーと注文の送信者の間でLRCの送信が常に行われることに注意してください。LRC手数料の余剰分を返送するか、LRC手数料を送信者に支払ってマージン分割を得るかのいずれかです。</p>
+<p>現在の手数料モデルは議論の余地があります。気軽に<a href="https://loopring.now.sh/">Slack</a>のコミュニティに参加し、それについて話してください。提案はgithubの<a href="https://github.com/Loopring/LIPs">LIPs</a>レポジトリにて歓迎していいます。</p>
+<h2 id="_14">発生イベント</h2>
+<p>このページでは、LSCが発行する一連のイベントについて触れています。これらのイベントは、リレー/オーダーブラウザや、注文ブックのアップデートを必要とする他のエレメントが迅速に情報を得られるよう存在します。</p>
+<p>発生イベント一覧：
+<em> <code>OrderCancelled</code>
+</em> <code>OrderFilled</code>
+* <code>RingMined</code></p>
+<h2 id="_15">詐欺や攻撃からの保護</h2>
+<h3 id="_16">リングフィルチェ</h3>
+<p>攻撃者は未確認のリングををすべてモニタし、自分のデジタル署名で同じリングをブロードキャストできます。これをリングフィルチェと呼びます。リングフィルチェを防ぐため、Loopringは、マイナーがリングを送信するための2つのステップを使用できるようにしています。</p>
+<ul>
+<li>リングのハッシュを提出し、承認を待つ</li>
+<li>リングそのものの提出</li>
+</ul>
+<p>この保護は、LSCで指定された<code>blocksToLive</code>時間内に有効です。この期間の後、リングが提出されなかった場合、他のマイナーがそれを請求できます。</p>
+<h3 id="_17">サービスの拒否</h3>
+<p>ノードは、独自の基準を設定することで注文を選択的に処理することや、非公開または公開にすることができます。そのため、サービスの拒否を、非倫理的な行為とは見ていません。</p>
+<h3 id="_18">大規模な小型注文攻撃</h3>
+<p>ユーザは、大量の小型注文を送信し、Loopringノードを攻撃する可能性があります。しかし、ノードが独自の基準に基づいて注文を拒否できるようにしているため、注文のほとんどは、マッチした際に満足できる利益をもたらさないため、拒否されます。したがって、大規模な小型注文攻撃は実現できません。</p>
+<h3 id="_19">残高不足</h3>
+<p>悪意あるユーザは、実際のアドレスの残高が0であっても、注文内の値が0ではない注文に署名し、広めることができます。ノードは実際の残高が0の注文を監視し、発見することが可能であり、必要に応じてこれらの注文の状態を更新し、破棄します。</p>
+<p>ノードは注文のステータスを更新するために時間を費やす必要がありますが、例えばアドレスをブラックリストに載せたり、関連する注文をドロップさせるなどして、作業を最小限におさえることもできます。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../relay/" class="btn btn-neutral float-right" title="Relays">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../token/" class="btn btn-neutral" title="LRC Token"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/Loopring/documents" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../token/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../relay/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../../js/theme.js"></script>
+
+</body>
+</html>

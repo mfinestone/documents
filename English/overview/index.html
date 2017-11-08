@@ -98,10 +98,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../projects/ringminer/">Ring Miners</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../projects/wallet/">Wallets</a>
                 </li>
                 <li class="">
@@ -111,6 +107,41 @@
                 <li class="">
                     
     <a class="" href="../contribution/">Contribution</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">日语</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Japanese/overview/">Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Japanese/token/">LRC Token</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Japanese/projects/protocol/">Protocol</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Japanese/projects/relay/">Relays</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Japanese/projects/wallet/">財布</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Japanese/projects/tokenization/">トークン化サービス</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Japanese/contribution/">貢献</a>
                 </li>
     </ul>
 	    </li>
@@ -174,11 +205,7 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 </blockquote>
 <p><strong><a href="../projects/relay/">Relays</a></strong></p>
 <blockquote>
-<p>Maintains public orderbooks and trade history. Broadcasts new orders to other relays and ring miners.</p>
-</blockquote>
-<p><strong><a href="../projects/ringminer/">Ring Miners</a></strong></p>
-<blockquote>
-<p>Tries to determine a way to fulfill received orders by ring-matching them. This is computational heavy and is done completly off-chain. The process produces chains of trades involving at least 2 tokens, we call that an <a href="../projects/protocol/#order-ring">order ring</a>.</p>
+<p>Maintains public orderbooks and trade history. Broadcasts new orders to other relays and ring miners. Ring-mining is a feature of relays. It is computational heavy and is done completly off-chain. The process produces chains of trades involving at least 2 tokens, we call that an <a href="../projects/protocol/#order-ring">order ring</a>.</p>
 </blockquote>
 <p><strong><a href="../projects/protocol/">Loopring Protocol Smart Contracts</a></strong></p>
 <blockquote>
@@ -202,7 +229,7 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 </blockquote>
 <p><strong>2 - Sending the order to the network</strong></p>
 <blockquote>
-<p>Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay or ring-miner).</p>
+<p>Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay).</p>
 </blockquote>
 <p><strong>3 - Broadcast</strong></p>
 <blockquote>
@@ -210,7 +237,7 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 </blockquote>
 <p><strong>4 - Ring Miners (order matching)</strong></p>
 <blockquote>
-<p>Ring Miners receive the order and add it to their orderbook. Each one of them tries to fill it fully or partially at the given exchange rate or better by ring-matching it with multiple other orders. The ring-matching is the main reason why the protocol is able to provide high liquidity over any pair. The details of the process are explained in the <a href="../projects/ringminer/">Ring Miners</a> page.
+<p>Ring Miners receive the order and add it to their orderbook. Each one of them tries to fill it fully or partially at the given exchange rate or better by ring-matching it with multiple other orders. The ring-matching is the main reason why the protocol is able to provide high liquidity over any pair.
 If the rate is better than the rate the user asked for, the savings are shared amongst all the orders in the ring and is called the Margin Split. For his fee the miner can choose between claiming the Margin Split and give back the LRC to the user or just keep the LRC fee.</p>
 </blockquote>
 <p><strong>5 - Validation &amp; Settlement</strong></p>
