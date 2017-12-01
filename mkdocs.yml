@@ -13,7 +13,7 @@ pages:
         - 'Wallets': English/projects/wallet.md
         - 'Tokenization Services': English/projects/tokenization.md
         - Contribution: English/contribution.md
-    - 日语:
+    - 日本語:
         - Loopring（ループリング）とは: Japanese/overview.md
         - 'スマートコントラクト': Japanese/projects/protocol.md
     # - Portuguese:
