@@ -14,8 +14,10 @@ pages:
         - 'Tokenization Services': English/projects/tokenization.md
         - Contribution: English/contribution.md
     - 日本語:
-        - Loopring（ループリング）とは: Japanese/overview.md
-        - 'スマートコントラクト': Japanese/projects/protocol.md
+        - 概要: Japanese/overview.md
+        - 契約: Japanese/projects/protocol.md
+    - 한국어:
+        - 개요: Korean/overview.md
     # - Portuguese:
     #     - Overview: Portuguese/overview.md
     #     - LRC Token: Portuguese/token.md
