@@ -1,181 +1,871 @@
+
+
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>契約 - Loopring Documentation</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/highlight.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "\u5951\u7d04";
-    var mkdocs_page_input_path = "Japanese/projects/protocol.md";
-    var mkdocs_page_url = "/Japanese/projects/protocol/";
-  </script>
-  
-  <script src="../../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Loopring Documentation</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Loopring - Decentralized Token Exchange Protocol">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.2">
+    
+    
+      
+        <title>契約 - Loopring Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.7a4cdee3.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="green" data-md-color-accent="deep-orange">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Loopring Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../../../img/logo.svg" width="24" height="24">
+          
+        </a>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../../..">About</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">English</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../../English/overview/">Overview</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../English/token/">LRC Token</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../English/projects/protocol/">Protocol</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../English/projects/relay/">Relays</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../English/projects/wallet/">Wallets</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../English/projects/tokenization/">Tokenization Services</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../English/contribution/">Contribution</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">日本語</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../overview/">概要</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">契約</a>
-    <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#loopring">Loopring スマートコントラクト</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#_1">注文の管理</a></li>
-        
-            <li><a class="toctree-l4" href="#_2">注文の詳細な分析</a></li>
-        
-            <li><a class="toctree-l4" href="#_5">マイナーが提供するデータの検証</a></li>
-        
-            <li><a class="toctree-l4" href="#_11">リング決済</a></li>
-        
-            <li><a class="toctree-l4" href="#_12">トランザクション</a></li>
-        
-            <li><a class="toctree-l4" href="#_14">発生イベント</a></li>
-        
-            <li><a class="toctree-l4" href="#_15">詐欺や攻撃からの保護</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
-    </ul>
-	    </li>
+              <span class="md-header-nav__topic">
+                Loopring Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                契約
+              </span>
+            
           
-            <li class="toctree-l1">
-		
-    <span class="caption-text">한국어</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../../Korean/overview/">개요</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+        </div>
       </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Loopring Documentation</a>
-      </nav>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
+
+  
+
+
+  <a href="https://github.com/Loopring/documents/" title="Go to repository" class="md-source" data-md-source="github">
     
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
       
         
-          <li>日本語 &raquo;</li>
+      
+      
         
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
       
+        
+  <li class="md-tabs__item">
     
-    <li>契約</li>
-    <li class="wy-breadcrumbs-aside">
+      <a href="../../.." title="About" class="md-tabs__link">
+        About
+      </a>
+    
+  </li>
+
       
-        <a href="https://github.com/Loopring/documents/edit/master/docs/Japanese/projects/protocol.md"
-          class="icon icon-github"> Edit on GitHub</a>
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../English/overview/" title="English" class="md-tabs__link">
+          English
+        </a>
       
     </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../overview/" title="日本語" class="md-tabs__link md-tabs__link--active">
+          日本語
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Korean/overview/" title="한국어" class="md-tabs__link">
+          한국어
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../../img/logo.svg" width="24" height="24">
+      
+    </span>
+    Loopring Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Loopring/documents/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      English
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        English
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/token/" title="LRC Token" class="md-nav__link">
+      LRC Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/projects/protocol/" title="Protocol" class="md-nav__link">
+      Protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/projects/relay/" title="Relays" class="md-nav__link">
+      Relays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/projects/wallet/" title="Wallets" class="md-nav__link">
+      Wallets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/projects/tokenization/" title="Tokenization Services" class="md-nav__link">
+      Tokenization Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../English/contribution/" title="Contribution" class="md-nav__link">
+      Contribution
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      日本語
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        日本語
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/" title="概要" class="md-nav__link">
+      概要
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        契約
+      </label>
+    
+    <a href="./" title="契約" class="md-nav__link md-nav__link--active">
+      契約
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="注文の管理" class="md-nav__link">
+    注文の管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="注文の詳細な分析" class="md-nav__link">
+    注文の詳細な分析
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="完全または部分的なキャンセル" class="md-nav__link">
+    完全または部分的なキャンセル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="約定とキャンセルの追跡" class="md-nav__link">
+    約定とキャンセルの追跡
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="マイナーが提供するデータの検証" class="md-nav__link">
+    マイナーが提供するデータの検証
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="注文リング" class="md-nav__link">
+    注文リング
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="注文リングの検証" class="md-nav__link">
+    注文リングの検証
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="サブループチェック" class="md-nav__link">
+    サブループチェック
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="約定レートの確認" class="md-nav__link">
+    約定レートの確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="注文のスケーリング" class="md-nav__link">
+    注文のスケーリング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="リング決済" class="md-nav__link">
+    リング決済
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" title="トランザクション" class="md-nav__link">
+    トランザクション
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="手数料モデル" class="md-nav__link">
+    手数料モデル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="発生イベント" class="md-nav__link">
+    発生イベント
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" title="詐欺や攻撃からの保護" class="md-nav__link">
+    詐欺や攻撃からの保護
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="リングフィルチェ" class="md-nav__link">
+    リングフィルチェ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="サービスの拒否" class="md-nav__link">
+    サービスの拒否
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="大規模な小型注文攻撃" class="md-nav__link">
+    大規模な小型注文攻撃
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="残高不足" class="md-nav__link">
+    残高不足
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      한국어
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        한국어
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Korean/overview/" title="개요" class="md-nav__link">
+      개요
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="注文の管理" class="md-nav__link">
+    注文の管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="注文の詳細な分析" class="md-nav__link">
+    注文の詳細な分析
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="完全または部分的なキャンセル" class="md-nav__link">
+    完全または部分的なキャンセル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="約定とキャンセルの追跡" class="md-nav__link">
+    約定とキャンセルの追跡
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="マイナーが提供するデータの検証" class="md-nav__link">
+    マイナーが提供するデータの検証
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="注文リング" class="md-nav__link">
+    注文リング
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="注文リングの検証" class="md-nav__link">
+    注文リングの検証
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="サブループチェック" class="md-nav__link">
+    サブループチェック
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="約定レートの確認" class="md-nav__link">
+    約定レートの確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="注文のスケーリング" class="md-nav__link">
+    注文のスケーリング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="リング決済" class="md-nav__link">
+    リング決済
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" title="トランザクション" class="md-nav__link">
+    トランザクション
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="手数料モデル" class="md-nav__link">
+    手数料モデル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="発生イベント" class="md-nav__link">
+    発生イベント
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" title="詐欺や攻撃からの保護" class="md-nav__link">
+    詐欺や攻撃からの保護
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="リングフィルチェ" class="md-nav__link">
+    リングフィルチェ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" title="サービスの拒否" class="md-nav__link">
+    サービスの拒否
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" title="大規模な小型注文攻撃" class="md-nav__link">
+    大規模な小型注文攻撃
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" title="残高不足" class="md-nav__link">
+    残高不足
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                  <a href="https://github.com/Loopring/documents/edit/master/docs/Japanese/projects/protocol.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
                 <h1 id="loopring">Loopring スマートコントラクト</h1>
 <p>Loopringスマートコントラクトは、Loopringプロトコルを実装した一連のEthereumコントラクトです。このドキュメントでは、それらが提供する機能を下記の構成で説明します。</p>
 <ul>
@@ -214,8 +904,8 @@
 <h2 id="_1">注文の管理</h2>
 <p>LSCの機能を理解するために、まずは注文の定義、ユーザーが利用可能な操作、および現在の注文ステータスの追跡方法を見ていく必要があります。</p>
 <h2 id="_2">注文の詳細な分析</h2>
-<p>注文とは、マーケットでのユーザーの意図を記述するデータの集まりです。注文の出どころを保証するため、ユーザーのプライベートキーを使って、<code>注文パラメータのハッシュで署名されます</code>。署名はネットワーク上の注文に沿って送信されます。これは、送信者のアドレスを検証するために、注文がライフタイムにわたり<code>不変</code>のままにすることを必要とします。<br/>
-<code>Signature = ECDSA(SHA3(order_params))</code></p>
+<p>注文とは、マーケットでのユーザーの意図を記述するデータの集まりです。注文の出どころを保証するため、ユーザーのプライベートキーを使って、<code class="codehilite">注文パラメータのハッシュで署名されます</code>。署名はネットワーク上の注文に沿って送信されます。これは、送信者のアドレスを検証するために、注文がライフタイムにわたり<code class="codehilite">不変</code>のままにすることを必要とします。<br/>
+<code class="codehilite">Signature = ECDSA(SHA3(order_params))</code></p>
 <p>注文が決して変更されない場合でも、LSCは<a href="./#transactions">現在の状態を計算する</a>ことが可能です。</p>
 <p>注文のパラメータに関連する変数(注文のパラメータの完全な一覧は、<a href="https://github.com/Loopring/protocol/blob/ef5290d59daa7be4eee450b215d6a50ca9d3492d/contracts/LoopringProtocol.sol#L39">コード</a>を参照してください)：</p>
 <table>
@@ -265,14 +955,14 @@
 </tbody>
 </table>
 <p>私たちは、上記のモデルを単方向注文モデル、略してUDOMと呼びました。UDOMについてさらに学ぶには、私たちの<a href="https://medium.com/@loopring/looprings-uni-directional-order-model-510067377fe9">mediumの投稿</a>を確認してください。</p>
-<p>注文の取引レート<code>r</code>は、次の数式<code>r = amountS/amountB</code>を使って決定されます。マイナーがリングマッチングをする場合、あなたが指定した<code>amountB</code>よりも多く<code>tokenB</code>を得る、より良いレートを見つける可能性があります。しかし、<code>buyNoMoreThanAmountB</code>フラグがセットされていれば、LSCは、やはり正確に<code>amountB</code>の<code>tokenB</code>を取得することを保証します。</p>
+<p>注文の取引レート<code class="codehilite">r</code>は、次の数式<code class="codehilite">r = amountS/amountB</code>を使って決定されます。マイナーがリングマッチングをする場合、あなたが指定した<code class="codehilite">amountB</code>よりも多く<code class="codehilite">tokenB</code>を得る、より良いレートを見つける可能性があります。しかし、<code class="codehilite">buyNoMoreThanAmountB</code>フラグがセットされていれば、LSCは、やはり正確に<code class="codehilite">amountB</code>の<code class="codehilite">tokenB</code>を取得することを保証します。</p>
 <blockquote>
-<p><strong>例</strong>：<code>amountS = 10</code>および<code>amountB = 2</code>、<code>r = 10/2 = 5</code>。これは、あなたが<code>tokenB毎に5つのtokenS</code>を売却する意思があることを意味します。マイナーは、リングマッチイングを行い、あなたに<code>2の代わりに2.5の tokenB</code>を得ることができる金額をトッピングし、<code>4のレートを見つけます</code>。あなたは2つの<code>tokenB</code>だけを必要としており、<code>buyNoMoreThanAmountBフラグをtrue</code>に設定します。LSCはそれを考慮し、4のレートでトランザクションを作成し、あなたは各 <code>tokenBに対して4つのtokenS</code>を売却し、<code>2つの tokenS を効果的に節約しました</code>。これはマイナーの手数料を考慮していないことに注意してください。</p>
+<p><strong>例</strong>：<code class="codehilite">amountS = 10</code>および<code class="codehilite">amountB = 2</code>、<code class="codehilite">r = 10/2 = 5</code>。これは、あなたが<code class="codehilite">tokenB毎に5つのtokenS</code>を売却する意思があることを意味します。マイナーは、リングマッチイングを行い、あなたに<code class="codehilite">2の代わりに2.5の tokenB</code>を得ることができる金額をトッピングし、<code class="codehilite">4のレートを見つけます</code>。あなたは2つの<code class="codehilite">tokenB</code>だけを必要としており、<code class="codehilite">buyNoMoreThanAmountBフラグをtrue</code>に設定します。LSCはそれを考慮し、4のレートでトランザクションを作成し、あなたは各 <code class="codehilite">tokenBに対して4つのtokenS</code>を売却し、<code class="codehilite">2つの tokenS を効果的に節約しました</code>。これはマイナーの手数料を考慮していないことに注意してください。</p>
 </blockquote>
 <h3 id="_3">完全または部分的なキャンセル</h3>
-<p>ユーザは、注文に関する詳細およびキャンセルする金額を含む特別なトランザクションをLSCに送信することで、一部または全部をキャンセルすることができます。LSCは、これを考慮に入れ、キャンセルする金額を保管し、<code>OrderCancelled</code>イベントをネットワークに発行します。</p>
+<p>ユーザは、注文に関する詳細およびキャンセルする金額を含む特別なトランザクションをLSCに送信することで、一部または全部をキャンセルすることができます。LSCは、これを考慮に入れ、キャンセルする金額を保管し、<code class="codehilite">OrderCancelled</code>イベントをネットワークに発行します。</p>
 <h3 id="_4">約定とキャンセルの追跡</h3>
-<p>LSCは、注文のハッシュを識別子として使用し、その値を格納することで、約定およびキャンセルの金額を追跡し続けます。このデータは一般にアクセス可能で、データ変更時に<code>OrderCancelled</code> / <code>OrderFilled</code>イベントが発行されます。</p>
+<p>LSCは、注文のハッシュを識別子として使用し、その値を格納することで、約定およびキャンセルの金額を追跡し続けます。このデータは一般にアクセス可能で、データ変更時に<code class="codehilite">OrderCancelled</code> / <code class="codehilite">OrderFilled</code>イベントが発行されます。</p>
 <p>この追跡は、<a href="./#ring-settlement">リング決済</a>のステップでのLSCに役立ちます。</p>
 <h2 id="_5">マイナーが提供するデータの検証</h2>
 <p>このセクションでは、LSCがマイナーから受け取る予定のものと、データを検証するために取られるステップについて説明します。</p>
@@ -283,25 +973,25 @@
 <p>1つのリングは、すべてのトランザクションがユーザによって指定されたオリジナルのものと同等またはそれ以上の交換レートで行われる場合に有効とされます。</p>
 <blockquote>
 <p><strong>例</strong>：ダイアグラムの上記のリングが有効かどうか確認しましょう。
-<code>0.2 * 14 * 0.5 = 1.4</code>の場合、結果は1より大きいため取引可能でなければなりません。</p>
+<code class="codehilite">0.2 * 14 * 0.5 = 1.4</code>の場合、結果は1より大きいため取引可能でなければなりません。</p>
 </blockquote>
 <h3 id="_7">注文リングの検証</h3>
-<p>LSCは、交換レートや金額の計算を行いませんが、マイナーが提供した、これらの値を検証する必要があります。これは、主に2つの理由でマイナーによって行われます。Solidityは浮動小数点演算、特に<code>pow(x, 1/n)</code>をサポートしておらず、また、計算はオフチェインで行いガスを節約することが望まれています。</p>
+<p>LSCは、交換レートや金額の計算を行いませんが、マイナーが提供した、これらの値を検証する必要があります。これは、主に2つの理由でマイナーによって行われます。Solidityは浮動小数点演算、特に<code class="codehilite">pow(x, 1/n)</code>をサポートしておらず、また、計算はオフチェインで行いガスを節約することが望まれています。</p>
 <p>次のセクションでは、注文リングの数学的検証について説明します。このページの冒頭に記載されているSupersimmetry氏のドキュメントを補足として確認することをおすすめします。</p>
 <h4 id="_8">サブループチェック</h4>
 <p>このステップは、<a href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">カバー付き金利裁定取引</a>を防止します。有効なリングがマイナーによって発見されると、マイナーはゼロリスクでカバー付き裁定取引を達成するために、他の注文を追加するよう誘惑される可能性があります。
 これはLoopringにおいて、マイナーからの不正な行為とみなされます。</p>
 <p>以下の図は、2つの注文が追加されたかつて有効だったリングを示しています。 
 <img alt="" src="../../img/diagrams/order-ring-sub-loop.png" /></p>
-<p>これを防ぐために、Loopringでは<strong>有効なループにサブループを含めることはできないこと</strong>を要します。これを確認する非常に簡単な方法があります：<code>1つのトークンは購入または売却のポジションで2回存在できない</code>というものです。上の図では、ARKが売却するトークンとして2回および購入するトークンとして2回含まれていることがわかります。</p>
+<p>これを防ぐために、Loopringでは**有効なループにサブループを含めることはできないこと**を要します。これを確認する非常に簡単な方法があります：<code class="codehilite">1つのトークンは購入または売却のポジションで2回存在できない</code>というものです。上の図では、ARKが売却するトークンとして2回および購入するトークンとして2回含まれていることがわかります。</p>
 <h3 id="_9">約定レートの確認</h3>
 <p>このページの上記理由により、リング内のトランザクションのレート計算はマイナーによって行われます。したがって、LSCはそれらが正しいことを確認する必要があります。</p>
 <p>まず、各注文についてマイナーが提供した売却レートが、少なくともユーザによって設定された売却レートに対して等しいかそれ以下であることを検証します。これはユーザが、トランザクションの際に、少なくともaskまたはそれ以上の交換レートを得ることを意味します。</p>
 <p>交換レートが確認されたら、公平性を確保するため、すべての注文に対して、すべてのマージン（ディスカウント）が同じ割合であることを確認します。</p>
 <h3 id="_10">注文のスケーリング</h3>
 <p>注文は次のようにスケーリングされます。
-<em> 約定およびキャンセルされた金額の履歴
-</em> 送信者の口座の現在の残高</p>
+* 約定およびキャンセルされた金額の履歴
+* 送信者の口座の現在の残高</p>
 <p>このプロセスでは、上記の特性に従って、約定される最小の金額で注文を探し、リング内のすべてのトランザクションをスケーリングするための参照に使用します。</p>
 <blockquote>
 <p><strong>例</strong>：元の注文と比較して最も少ない約定金額を5%とすると、リング内のすべてのトランザクションは5%に縮小されます。トランザクションが完了したら、残りの約定されるべき最も少ない金額の注文は完全に約定される必要があります。</p>
@@ -309,9 +999,9 @@
 <h2 id="_11">リング決済</h2>
 <p>以前の確認ですべてOKなら、トランザクションが作成されます。</p>
 <h2 id="_12">トランザクション</h2>
-<p>トランザクションを作成するため、LSCは<code>TokenTransferDelegate</code>スマートコントラクトを使用します。このデリゲートを導入すると、すべての注文がデリゲートを許可するだけで済むので、異なるプロトコルバージョンではなく、プロトコルのスマートコントラクトのアップグレードを容易にします。</p>
-<p>リング内の各注文において、toksnSの支払いは前の注文に対して発生します。そして、マイナーにより選択された手数料モデルに応じて、マイナーの手数料が支払われます。モデルがLRC手数料の場合、手数料が支払われた後の残りの金額が注文の所有者に返されます。最後に、<code>OrderFilled</code>イベントが発生します。</p>
-<p>すべてのトランザクションが作成されると、<code>RingMined</code>イベントが発生します。</p>
+<p>トランザクションを作成するため、LSCは<code class="codehilite">TokenTransferDelegate</code>スマートコントラクトを使用します。このデリゲートを導入すると、すべての注文がデリゲートを許可するだけで済むので、異なるプロトコルバージョンではなく、プロトコルのスマートコントラクトのアップグレードを容易にします。</p>
+<p>リング内の各注文において、toksnSの支払いは前の注文に対して発生します。そして、マイナーにより選択された手数料モデルに応じて、マイナーの手数料が支払われます。モデルがLRC手数料の場合、手数料が支払われた後の残りの金額が注文の所有者に返されます。最後に、<code class="codehilite">OrderFilled</code>イベントが発生します。</p>
+<p>すべてのトランザクションが作成されると、<code class="codehilite">RingMined</code>イベントが発生します。</p>
 <h3 id="_13">手数料モデル</h3>
 <p>このセクションでは、Loopringの現在の手数料モデルについて説明します。補足として、Daniel氏の<a href="https://medium.com/@loopring/remarks-on-looprings-fee-model-7b6713f59fb7">mediumの記事</a>について読むことをおすすめします。</p>
 <p>現在の手数料モデルでは、マイナーは２つの選択肢があります。
@@ -328,20 +1018,20 @@
 <li>xはマージン分割</li>
 <li>yはマイナーの収入</li>
 </ul>
-<p><code>f</code>がLRC手数料、および<code>x</code>がマージン分割の場合、マイナーの収入<code>y</code>は、<code>y = max(f, x-f)</code>で、青線が得られます。</p>
-<p>注文に関して指定されたLRC手数料が0の場合、方程式は<code>y = max(0, x - 0)</code>となり、<code>y = x</code>に単純化され、オレンジ色の線が得られます。</p>
+<p><code class="codehilite">f</code>がLRC手数料、および<code class="codehilite">x</code>がマージン分割の場合、マイナーの収入<code class="codehilite">y</code>は、<code class="codehilite">y = max(f, x-f)</code>で、青線が得られます。</p>
+<p>注文に関して指定されたLRC手数料が0の場合、方程式は<code class="codehilite">y = max(0, x - 0)</code>となり、<code class="codehilite">y = x</code>に単純化され、オレンジ色の線が得られます。</p>
 <p>これから次の結果を得ます：
-- <code>マージン分割が0</code>の場合、マイナーはLRC手数料を選択することで、インセンティブを得られます。
-- <code>LRC手数料が0</code>の場合、これはオレンジ色の線で、収入は一般的なモデルに基づきます。
-- <code>マージン分割所得</code>が<code>LRC手数料の2倍</code>以上になると、マイナーはマージン分割を選択します。</p>
-<p><code>LRC手数料が0でない</code>場合、マイナーが選択するオプションに関わらず、マイナーと注文の送信者の間でLRCの送信が常に行われることに注意してください。LRC手数料の余剰分を返送するか、LRC手数料を送信者に支払ってマージン分割を得るかのいずれかです。</p>
+- <code class="codehilite">マージン分割が0</code>の場合、マイナーはLRC手数料を選択することで、インセンティブを得られます。
+- <code class="codehilite">LRC手数料が0</code>の場合、これはオレンジ色の線で、収入は一般的なモデルに基づきます。
+- <code class="codehilite">マージン分割所得</code>が<code class="codehilite">LRC手数料の2倍</code>以上になると、マイナーはマージン分割を選択します。</p>
+<p><code class="codehilite">LRC手数料が0でない</code>場合、マイナーが選択するオプションに関わらず、マイナーと注文の送信者の間でLRCの送信が常に行われることに注意してください。LRC手数料の余剰分を返送するか、LRC手数料を送信者に支払ってマージン分割を得るかのいずれかです。</p>
 <p>現在の手数料モデルは議論の余地があります。気軽に<a href="https://loopring.now.sh/">Slack</a>のコミュニティに参加し、それについて話してください。提案はgithubの<a href="https://github.com/Loopring/LIPs">LIPs</a>レポジトリにて歓迎していいます。</p>
 <h2 id="_14">発生イベント</h2>
 <p>このページでは、LSCが発行する一連のイベントについて触れています。これらのイベントは、リレー/オーダーブラウザや、注文ブックのアップデートを必要とする他のエレメントが迅速に情報を得られるよう存在します。</p>
 <p>発生イベント一覧：
-<em> <code>OrderCancelled</code>
-</em> <code>OrderFilled</code>
-* <code>RingMined</code></p>
+* <code class="codehilite">OrderCancelled</code>
+* <code class="codehilite">OrderFilled</code>
+* <code class="codehilite">RingMined</code></p>
 <h2 id="_15">詐欺や攻撃からの保護</h2>
 <h3 id="_16">リングフィルチェ</h3>
 <p>攻撃者は未確認のリングををすべてモニタし、自分のデジタル署名で同じリングをブロードキャストできます。これをリングフィルチェと呼びます。リングフィルチェを防ぐため、Loopringは、マイナーがリングを送信するための2つのステップを使用できるようにしています。</p>
@@ -349,7 +1039,7 @@
 <li>リングのハッシュを提出し、承認を待つ</li>
 <li>リングそのものの提出</li>
 </ul>
-<p>この保護は、LSCで指定された<code>blocksToLive</code>時間内に有効です。この期間の後、リングが提出されなかった場合、他のマイナーがそれを請求できます。</p>
+<p>この保護は、LSCで指定された<code class="codehilite">blocksToLive</code>時間内に有効です。この期間の後、リングが提出されなかった場合、他のマイナーがそれを請求できます。</p>
 <h3 id="_17">サービスの拒否</h3>
 <p>ノードは、独自の基準を設定することで注文を選択的に処理することや、非公開または公開にすることができます。そのため、サービスの拒否を、非倫理的な行為とは見ていません。</p>
 <h3 id="_18">大規模な小型注文攻撃</h3>
@@ -357,52 +1047,98 @@
 <h3 id="_19">残高不足</h3>
 <p>悪意あるユーザは、実際のアドレスの残高が0であっても、注文内の値が0ではない注文に署名し、広めることができます。ノードは実際の残高が0の注文を監視し、発見することが可能であり、必要に応じてこれらの注文の状態を更新し、破棄します。</p>
 <p>ノードは注文のステータスを更新するために時間を費やす必要がありますが、例えばアドレスをブラックリストに載せたり、関連する注文をドロップさせるなどして、作業を最小限におさえることもできます。</p>
+                
+                  
+                
               
-            </div>
+              
+                
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../../Korean/overview/" class="btn btn-neutral float-right" title="개요">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../overview/" class="btn btn-neutral" title="概要"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../overview/" title="概要" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                概要
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../Korean/overview/" title="개요" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                개요
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-	  
-        </div>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
       </div>
-
-    </section>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Loopring" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/loopringorg" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://t.me/loopringinternational" class="md-footer-social__link fa fa-telegram"></a>
+    
+      <a href="medium.com/loopring-protocol" class="md-footer-social__link fa fa-medium"></a>
+    
+      <a href="https://loopring.rocket.chat/" class="md-footer-social__link fa fa-slack"></a>
     
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/Loopring/documents" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+    </div>
+  </div>
+</footer>
       
+    </div>
+    
+      <script src="../../../assets/javascripts/application.6cdc17f0.js"></script>
       
-        <span><a href="../../overview/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
       
+    
+    
       
-        <span style="margin-left: 15px"><a href="../../../Korean/overview/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script src="../../../js/theme.js"></script>
-
-</body>
+    
+  </body>
 </html>
