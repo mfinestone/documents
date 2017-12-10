@@ -69,7 +69,7 @@ This section will talk about what the LSC expect to receive from the miners and 
 ### Order Ring
 The LSC expect to receive order rings from the miners. An order ring is multiple orders linked together in a way that allows them to be all matched at their desired exchange rate or better. See the diagram below as an example.
 
-![](../img/diagrams/order-ring.png)
+![](/img/diagrams/order-ring.png)
 
 Notice how each order's token to sell is the following order's token to buy. It creates a loop that allows each order to effectively sell and buy their desired tokens without having a matching order of the opposite pair.
 
@@ -88,7 +88,7 @@ This step prevents about [covered interest arbitrage](https://en.wikipedia.org/w
 This is considered as an unfair conduct from the miner in Loopring.
 
 The diagram bellow illustrates the previous valid ring where 2 orders were added.
-![](../img/diagrams/order-ring-sub-loop.png)
+![](/img/diagrams/order-ring-sub-loop.png)
 
 To prevent this, Loopring requires that **a valid loop cannot contain a sub-loop**. There is a very simple way to check this: a `token cannot be twice in a buy or sell position`. In the above diagram we can see that ARK is twice as a token to sell and twice as a token to buy.
 
@@ -126,7 +126,7 @@ When a user creates his order, he specifies a maximum of LRC to be paid to the m
 
 A representation of the margin split:
 
-![](../img/diagrams/margin-split.png)
+![](/img/diagrams/margin-split.png)
 
 If the miner decides that the margin on the ring is too small, he will choose the LRC fee. On the contrary if the margin is consequent enough for the resulting margin split to be worth more than the LRC fee, he will choose the margin split.
 
@@ -136,7 +136,7 @@ From the miner's point of view, this allows him to get a constant income on low 
 
 We end up with the following graph:
 
-![](../img/fee-model.png)
+![](/img/fee-model.png)
 
 - f is the LRC fee
 - x is the margin split

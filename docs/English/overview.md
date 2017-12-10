@@ -29,7 +29,7 @@ This section introduces the key parts of the loopring ecosystem and how they int
 
 ## Overview
 This is the lifecycle of a successful order on the loopring network with an explanation of each step bellow.
-![](./img/diagrams/loopring-overview.png)
+![](/img/diagrams/loopring-overview.png)
 
 **The user wants to make a trade**: The user wants to exchange `X` amount of `TokenA` for `Y` amount of `TokenB`. The current rate and orderbook for this pair can be found on multiple sources provided by the relays or any other interface hooked up on the network (e.g. orderbook browsers). Once he is ready, he uses his wallet interface to enter the details of his order and submits it. An amount of LRC can be added to the order as a fee for miners. Orders with a higher LRC fee have a better chance to be processed earlier by miners.
 
@@ -52,7 +52,7 @@ To better understand the need of a system such as loopring, we first need to poi
 
 Here is a very simplified view of what happens when you send your tokens to a centralized exchange.
 
-![](../img/diagrams/centralized-model.png)
+![](/img/diagrams/centralized-model.png)
 
 In order to use the exchange and trade your tokens, you first have to deposit your tokens in the exchange. Your tokens are sent to the exchange's wallets and it gives you back an IOU (I owe you), which is a proof of debt. Then you trade your IOU with other users IOUs. Finally when you want to withdraw, you give back your IOU to the exchange which then sends you back your tokens to your external wallet address.
 

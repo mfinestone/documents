@@ -48,7 +48,7 @@ extra:
 repo_url: https://github.com/Loopring/documents
 site_description: Loopring - Decentralized Token Exchange Protocol
 pages:
-    - About: index.md
+    - Loopring: index.md
     - English:
         - Overview: English/overview.md
         - LRC Token: English/token.md

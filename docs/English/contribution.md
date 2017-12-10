@@ -14,7 +14,7 @@ You may want to talk to Daniel Wang ([daniel@loopring.org](mailto:daniel@looprin
 
 For git repositories that have releases (this one not included), we will adopt ["A Successful Git Branching Model"](http://nvie.com/posts/a-successful-git-branching-model/) starting from Nov. 1st, 2017.
 
-![](img/git-branching-model.png)
+![](/img/git-branching-model.png)
 
 ## Contributors
 
