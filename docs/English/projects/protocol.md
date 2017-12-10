@@ -2,26 +2,6 @@
 
 The loopring smart contracts are a set of ethereum contracts that implement the loopring protocol. This document describes the functionnalities they provide and is structured as follows:
 
-- [Management of Orders](protocol.md#management-of-orders)
-	- [Anatomy of an Order](protocol.md#anatomy-of-an-order)
-	- [Full or Partial Cancellation](protocol.md#full-or-partial-cancellation)
-	- [Fill and Cancellation Tracking](protocol.md#fill-and-cancellation-tracking)
-- [Verification of Miner Supplied Data](protocol.md#verification-of-miner-supplied-data)
-	- [Order Ring](protocol.md#order-ring)
-	- [Order Ring Validation](protocol.md#order-ring-validation)
-		- [Sub-Loop Checking](protocol.md#sub-loop-checking)
-		- [Fill Rate Checing](protocol.md#fill-rate-checking)
-		- [Order Scaling](protocol.md#order-scaling)
-- [Ring settlement](protocol.md#ring-settlement)
-	- [Transactions](protocol.md#transactions)
-	- [Fee Model](protocol.md#fee-model)
-- [Emitted Events](protocol.md#emitted-events)
-- [Fraud and Attack Protections](protocol.md#fraud-and-attack-protections)
-	- [Ring Filch](protocol.md#ring-filch)
-	- [Denial of Service](protocol.md#denial-of-service)
-	- [Massive Tiny Order Attack](protocol.md#massive-tiny-order-attack)
-	- [Insufficient Balance](protocol.md#insufficient-balance)
-
 The code is open source and available on [github](https://github.com/Loopring/protocol).
 
 The Loopring Smart Contracts will be refered as `LSC` in this document. You can read more about the calculations and formulas used here in the [whitepaper](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf) and supersimmetry's {[da447m@yahoo.com](mailto:da447m@yahoo.com)} [Remarks on Loopring](../pdf/supersimmetry-loopring-remark.pdf). Please be noted that in the current protocol implementation, the pricing model is the same as in our whitepaper and supersimmetry's document, but the fee model is different.

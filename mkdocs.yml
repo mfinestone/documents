@@ -1,6 +1,50 @@
 site_name: Loopring Documentation
-theme: readthedocs
+theme: material
+theme:
+    name: 'material'
+    palette:
+        primary: 'green'
+        accent: 'deep orange'
+    logo: 'img/logo.svg'
+    feature:
+        tabs: true
+extra_css:
+    - 'stylesheets/extra.css'
 strict: true
+markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - meta
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+extra:
+    social:
+        - type: 'github'
+          link: 'https://github.com/Loopring'
+        - type: 'twitter'
+          link: 'https://twitter.com/loopringorg'
+        - type: 'telegram'
+          link: 'https://t.me/loopringinternational'
+        - type: 'medium'
+          link: 'medium.com/loopring-protocol'
+        - type: 'slack'
+          link: 'https://loopring.rocket.chat/'      
+
 repo_url: https://github.com/Loopring/documents
 site_description: Loopring - Decentralized Token Exchange Protocol
 pages:

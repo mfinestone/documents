@@ -13,8 +13,8 @@ After the refunding effort to our Chinese investors, the total circulating suppl
 
 The foundation controls the following addresses:
 
-Address  | LRC Balance
-------------- | -------------:|
+| Address  | LRC Balance |
+| ------------- | -------------:|
 0x7B22713f2e818fad945AF5a3618a2814F102cbe0 (icebox)	|	279,015,212	|
 0xdFCA9bF60785A5651b4262755cA60d48EFe6E3CF	|	138,768,403	|
 0x51018afFFaD06730D5b815486e6d9acE7bA99409	|	106,527,780	|
@@ -33,8 +33,8 @@ SUB-TOTAL	|	838,662,393	|
 
 The following addresses contain LRC that are burned by either the foundation or some users (Nobody can transfer these LRC out to another address).
 
-Address  | LRC Balance
-------------- | -------------:|
+| Address  | LRC Balance
+| ------------- | -------------:|
 0x0000000000000000000000000000000000000000 (blackhole)	|	20,000,000	|
 0xEF68e7C694F40c8202821eDF525dE3782458639f (LRC-contract)	|	117,776	|
 SUB-TOTAL	|	20,117,776	|	
@@ -43,8 +43,8 @@ Additionally, several institute addresses collectively hold about 118,626,980 LR
 
 We also have two incentive plan addresses. The first one is the mid-term plan whose LRC may be unlock in about a year; the second address is for the long-term plan whose LRC won't be unlocked until 18 months later.
 
-Address  | LRC Balance
-------------- | -------------:|
+| Address  | LRC Balance
+| ------------- | -------------:|
 0x8b34fbc553db3462ad4909f2e5577cc22f63c216 (mid-term)	|	39,261,025	|
 0x239dE3a0D6ca5f21601f83327eA2174225eB7156 (long-term)	|	92,237,125	|
  SUB-TOTAL	|	131,498,150	|
@@ -60,7 +60,6 @@ Incentive Plans|	131,498,150	|	9.4%
 Circulating	Supply|	286,170,755.5238	|	20.5%
 **Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054.5238</a>	|	**100.0%**
 
-Please note:
-
-1. Loopring foundation are determined to reward a considerable portion of LRC tokens to developers, partners, and community contributors, the circulating supply will increase overtime. 
-2. All the above numbers are collected and calculated on Sept 25th, 2017 and may not be updated in time to reflect the facts when you read this document.
+!!! note
+    1. Loopring foundation are determined to reward a considerable portion of LRC tokens to developers, partners, and community contributors, the circulating supply will increase overtime. 
+    2. All the above numbers are collected and calculated on Sept 25th, 2017 and may not be updated in time to reflect the facts when you read this document.
