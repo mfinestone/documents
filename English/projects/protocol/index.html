@@ -177,8 +177,8 @@
         
   <li class="md-tabs__item">
     
-      <a href="../../.." title="About" class="md-tabs__link">
-        About
+      <a href="../../.." title="Loopring" class="md-tabs__link">
+        Loopring
       </a>
     
   </li>
@@ -274,8 +274,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="About" class="md-nav__link">
-      About
+    <a href="../../.." title="Loopring" class="md-nav__link">
+      Loopring
     </a>
   </li>
 
@@ -937,7 +937,7 @@
 <p>This section will talk about what the LSC expect to receive from the miners and the steps taken to verify the data.</p>
 <h3 id="order-ring">Order Ring</h3>
 <p>The LSC expect to receive order rings from the miners. An order ring is multiple orders linked together in a way that allows them to be all matched at their desired exchange rate or better. See the diagram below as an example.</p>
-<p><img alt="" src="../../img/diagrams/order-ring.png" /></p>
+<p><img alt="" src="../../../img/diagrams/order-ring.png" /></p>
 <p>Notice how each order's token to sell is the following order's token to buy. It creates a loop that allows each order to effectively sell and buy their desired tokens without having a matching order of the opposite pair.</p>
 <p>A ring is said to be valid when all the transactions can be made at an exchange rate equal or better than the original one specified by the user.
 To verify the ring validity, the product of the original exchange rates of all orders should be equal to or greater than 1.</p>
@@ -952,7 +952,7 @@ To verify the ring validity, the product of the original exchange rates of all o
 <p>This step prevents about <a href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">covered interest arbitrage</a>. Once a valid ring is found by a miner, he could be tempted to add other orders to it to achieve a zero-risk covered interest arbitrage.
 This is considered as an unfair conduct from the miner in Loopring.</p>
 <p>The diagram bellow illustrates the previous valid ring where 2 orders were added.
-<img alt="" src="../../img/diagrams/order-ring-sub-loop.png" /></p>
+<img alt="" src="../../../img/diagrams/order-ring-sub-loop.png" /></p>
 <p>To prevent this, Loopring requires that <strong>a valid loop cannot contain a sub-loop</strong>. There is a very simple way to check this: a <code class="codehilite">token cannot be twice in a buy or sell position</code>. In the above diagram we can see that ARK is twice as a token to sell and twice as a token to buy.</p>
 <h3 id="fill-rate-checking">Fill Rate Checking</h3>
 <p>The rates calculation for the transactions in the ring are made by the miners for the reasons stated above in this page. Therefore the LSC have to verify that they are correct.</p>
@@ -977,12 +977,12 @@ This is considered as an unfair conduct from the miner in Loopring.</p>
 <p>In the current fee model, the miner has two possible choices.
 When a user creates his order, he specifies a maximum of LRC to be paid to the miner as a fee as well as a percentage of the margin made on his order that the miner can claim. This is called the margin split. The decision of which one to choose is left to the miner.</p>
 <p>A representation of the margin split:</p>
-<p><img alt="" src="../../img/diagrams/margin-split.png" /></p>
+<p><img alt="" src="../../../img/diagrams/margin-split.png" /></p>
 <p>If the miner decides that the margin on the ring is too small, he will choose the LRC fee. On the contrary if the margin is consequent enough for the resulting margin split to be worth more than the LRC fee, he will choose the margin split.</p>
 <p>But here comes the twist. When the miner chooses the margin split, he has to pay the user a fee, which is equal to what the user would have paid as a fee to the miner for his transaction. This increases the threshold where the miner will choose the margin split to twice the LRC fee of the order, adding weight to the LRC fee choice.</p>
 <p>From the miner's point of view, this allows him to get a constant income on low margin rings with the drawback of getting less income from the bigger margin rings. As the market grows and becomes more mature, we expect to have less high margin rings and our fee model is based on that future.</p>
 <p>We end up with the following graph:</p>
-<p><img alt="" src="../../img/fee-model.png" /></p>
+<p><img alt="" src="../../../img/fee-model.png" /></p>
 <ul>
 <li>f is the LRC fee</li>
 <li>x is the margin split</li>

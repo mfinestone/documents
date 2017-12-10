@@ -177,8 +177,8 @@
         
   <li class="md-tabs__item">
     
-      <a href="../.." title="About" class="md-tabs__link">
-        About
+      <a href="../.." title="Loopring" class="md-tabs__link">
+        Loopring
       </a>
     
   </li>
@@ -274,8 +274,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="About" class="md-nav__link">
-      About
+    <a href="../.." title="Loopring" class="md-nav__link">
+      Loopring
     </a>
   </li>
 
@@ -603,7 +603,7 @@ Bear in mind that as we proceed with the implementation, some details in the whi
 <p>Asset Tokenization Services is not part of Loopring project though.</p>
 <h2 id="overview">Overview</h2>
 <p>This is the lifecycle of a successful order on the loopring network with an explanation of each step bellow.
-<img alt="" src="../img/diagrams/loopring-overview.png" /></p>
+<img alt="" src="../../img/diagrams/loopring-overview.png" /></p>
 <p><strong>The user wants to make a trade</strong>: The user wants to exchange <code class="codehilite">X</code> amount of <code class="codehilite">TokenA</code> for <code class="codehilite">Y</code> amount of <code class="codehilite">TokenB</code>. The current rate and orderbook for this pair can be found on multiple sources provided by the relays or any other interface hooked up on the network (e.g. orderbook browsers). Once he is ready, he uses his wallet interface to enter the details of his order and submits it. An amount of LRC can be added to the order as a fee for miners. Orders with a higher LRC fee have a better chance to be processed earlier by miners.</p>
 <p><strong>ERC20 Authorization</strong>: The wallet authorizes the loopring smart contracts to handle <code class="codehilite">X</code> amount of the <code class="codehilite">TokenA</code> the user wants to sell. This does not lock the user's tokens. He is free to move them while the order is being processed by the network. If the sender's balance is being checked at some point (by a miner or the loopring ) and the funds are insufficient, it will be considered scaled-down. A order being scaled-down is not the same as being cancelled, a scaled-down order will be automatically scaled up to its original size if funds sufficient are deposited to its address, while cancellation is a one way manual operation and cannot be revert.</p>
 <p><strong>Sending the order to the network</strong>: Once the authorization is made, the order's data is signed with the private key of the sender. Then, the wallet sends the order along with its signature to one or more nodes in the network (relay).</p>
@@ -639,7 +639,7 @@ If the rate is better than the rate the user asked for, the savings are shared a
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Loopring" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -648,7 +648,7 @@ If the rate is better than the rate the user asked for, the savings are shared a
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                About
+                Loopring
               </span>
             </div>
           </a>
