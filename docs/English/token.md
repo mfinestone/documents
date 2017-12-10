@@ -4,8 +4,7 @@
 <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
 <div class="coinmarketcap-currency-widget" data-currency="loopring" data-base="USD"  data-secondary="BTC"></div>
 
-To learn more about LRC token, checkout [https://etherscan.io/address/lrctoken.eth](https://etherscan.io/address/lrctoken.eth) or 
-[https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f](https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f).
+Our ERC20 smart contract is [verified](https://etherscan.io/address/lrctoken.eth) on etherescan.io.
 
 ## Circulating Supply
 
