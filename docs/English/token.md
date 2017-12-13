@@ -38,7 +38,7 @@ The following addresses contain LRC that are burned by either the foundation or 
 0xEF68e7C694F40c8202821eDF525dE3782458639f (LRC-contract)	|	117,776	|
 SUB-TOTAL	|	20,117,776	|	
 
-Additionally, several institute addresses collectively hold about 118,626,980 LRC that are not suppose to circulate within a year. We cannot list these addresses.
+Additionally, several institute addresses collectively hold about 118,626,980 LRC that are not suppose to circulate within a year but this is not enforced by any contracts. We cannot list these addresses.
 
 We also have two incentive plan addresses. The first one is the mid-term plan whose LRC may be unlock in about a year; the second address is for the long-term plan whose LRC won't be unlocked until 18 months later.
 
@@ -47,16 +47,18 @@ We also have two incentive plan addresses. The first one is the mid-term plan wh
 0x8b34fbc553db3462ad4909f2e5577cc22f63c216 (mid-term)	|	39,261,025	|
 0x239dE3a0D6ca5f21601f83327eA2174225eB7156 (long-term)	|	92,237,125	|
  SUB-TOTAL	|	131,498,150	|
+
+To Build an ecosystem around the Loopring Protocol, we are also releaseing LRC to a fund called LEAF (more information will be available) to incentivize individual and institute developers for building Loopring-enabled apps and to help us build a better comminity. We consider this part of LRC is also in circulation.
  
 Put all these together, we have:
 
 Address Group  | LRC Balance | Percentage|
 ------------- | -------------:|-------------:|
-Foundation	|	838,662,393	|	60.1%
+Foundation	|	629,345,655	|	45.1% (excluding 15% LEAF fund)
 Burned	|	20,117,776	|	1.4%
 Institute Investors	|	118,626,980	|	8.5%
 Incentive Plans|	131,498,150	|	9.4%
-Circulating	Supply|	286,170,755.5238	|	20.5%
+Circulating	Supply|	495,563,991	|	35.5% (including 15% LEAF fund)
 **Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054.5238</a>	|	**100.0%**
 
 !!! note
