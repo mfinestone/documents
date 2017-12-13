@@ -48,7 +48,7 @@ We also have two incentive plan addresses. The first one is the mid-term plan wh
 0x239dE3a0D6ca5f21601f83327eA2174225eB7156 (long-term)	|	92,237,125	|
  SUB-TOTAL	|	131,498,150	|
 
-To Build an ecosystem around the Loopring Protocol, we are also releaseing LRC to a fund called LEAF (more information will be available) to incentivize individual and institute developers for building Loopring-enabled apps and to help us build a better comminity. We consider this part of LRC is also in circulation.
+To Build an ecosystem around the Loopring Protocol, we are also releaseing LRC to a fund called LEAF (more information will be available) to incentivize individual and institute developers for building Loopring-enabled apps and to help us build a better comminity during the next 4 years. We consider this part of LRC is also in circulation.
  
 Put all these together, we have:
 
