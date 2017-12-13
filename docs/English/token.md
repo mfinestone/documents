@@ -54,11 +54,11 @@ Put all these together, we have:
 
 Address Group  | LRC Balance | Percentage|
 ------------- | -------------:|-------------:|
-Foundation (excluding 15% LEAF fund)	|	629,345,655	|	45.1%
+Foundation (excluding LEAF)	|	606598221	|	40.1%
 Burned	|	20,117,776	|	1.4%
 Institute Investors	|	118,626,980	|	8.5%
 Incentive Plans|	131,498,150	|	9.4%
-Circulating	Supply (including 15% LEAF fund)|	495,563,991	|	35.5%
+Circulating	Supply (including LEAF)|	565361736	|	40.5%
 **Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054.5238</a>	|	**100.0%**
 
 !!! note
