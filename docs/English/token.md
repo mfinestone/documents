@@ -8,7 +8,7 @@ Our ERC20 smart contract is [verified](https://etherscan.io/address/lrctoken.eth
 
 ## Circulating Supply
 
-After the refunding effort to our Chinese investors, the total circulating supply ratio is 20.5%.
+After our refunding effort to our early investors in China, our LRC airdrops, and the founding of the Loopring Ecosystem Advancement Fund (LEAF), the total circulating supply is about 585931942 (42%).
 
 The foundation controls the following addresses:
 
@@ -54,11 +54,11 @@ Put all these together, we have:
 
 Address Group  | LRC Balance | Percentage|
 ------------- | -------------:|-------------:|
-Foundation (excluding LEAF)	|	606598221	|	40.1%
+Foundation (excluding LEAF)	|	539894433	|	38.7%
 Burned	|	20,117,776	|	1.4%
 Institute Investors	|	118,626,980	|	8.5%
 Incentive Plans|	131,498,150	|	9.4%
-Circulating	Supply (including LEAF)|	565361736	|	40.5%
+Circulating	Supply (including LEAF)|	585931942	|	42%
 **Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054.5238</a>	|	**100.0%**
 
 !!! note
