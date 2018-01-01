@@ -49,16 +49,18 @@ Address  | LRC Balance
 0x239dE3a0D6ca5f21601f83327eA2174225eB7156 (long-term)	|	92,237,125	|
  SUB-TOTAL	|	131,498,150	|
  
+We also set up a Loopring Ecosystem Advancement Fund (LEAF) of 20% of all total supply on incentivize partners and contributors.
+
 Put all these together, we have:
 
 Address Group  | LRC Balance | Percentage|
 ------------- | -------------:|-------------:|
-Foundation	|	838,662,393	|	60.1%
+Foundation	|	559425498	|	40.1%
 Burned	|	20,117,776	|	1.4%
 Institute Investors	|	118,626,980	|	8.5%
 Incentive Plans|	131,498,150	|	9.4%
-Circulating	Supply|	286,170,755.5238	|	20.5%
-**Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054.5238</a>	|	**100.0%**
+Circulating	Supply (including LEAF)|	565,005,802	|	40.5%
+**Total Supply**	|	<a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054</a>	|	**100.0%**
 
 Please note:
 
