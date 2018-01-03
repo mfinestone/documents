@@ -44,7 +44,7 @@ We consider the forementioned three groups of LRCs not in circulation, therefore
 
 |Address Group  | LRC Balance| Percentage|
 |------------- | -------------:|-------------:|
-Foundation  |   498,111,041   |   30.5%
+Foundation  |   425,479,956   |   30.5%
 Burned  |   20,119,186  |   1.4%
 Institute Investors |   100,065,000 |   7.2%
 Long-term Incentive Plan|    115,322,523 |   8.3%
