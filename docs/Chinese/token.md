@@ -16,14 +16,11 @@ The foundation controls the following addresses:
 |Address  | LRC Balance|
 |------------- | -------------:|
 0x7B22713f2e818fad945AF5a3618a2814F102cbe0 (iceboxm, circulating in 2 years) |   279,015,212 |
-0x9952F869f12a7af92aB86B275cFa231C868Aad23  |   44,754,486 |
 0xB7bb1E956beF65F22B32b04f230159040Dcb1829  |   1,924,388 |
 0x1C2bF1A1Cfdf2D2aA401735Da5996F8171C81C5f  |   42,324,661  |
 0x959c6b8574b779A1E7d709e4966Ec2C8F8ABa4b4  |   54,001,284  |
 0x85e64Df825c6397904Fe4A366629112079C64858  |   48,214,413  |
-0x81A5c6392c4DBE91fC942FA2010563c88D830Cf4  |   27,876,599  |
-0x8b34fbc553db3462ad4909f2e5577cc22f63c216 (mid-term plan) | 39,261,025|
-SUB-TOTAL   |   537,372,066 |   
+SUB-TOTAL   |   425,479,956 |   
 
 The following addresses contain LRC that are burned by either the foundation or some users (Nobody can transfer these LRC out to another address).
 
@@ -47,19 +44,22 @@ We consider the forementioned three groups of LRCs not in circulation, therefore
 
 |Address Group  | LRC Balance| Percentage|
 |------------- | -------------:|-------------:|
-Foundation  |   537,372,066   |   38.5%
+Foundation  |   498,111,041   |   30.5%
 Burned  |   20,119,186  |   1.4%
 Institute Investors |   100,065,000 |   7.2%
-Long-term Incentive Plans|    115,322,523 |   8.3%
-Circulating Supply (including LEAF)|    622,197,280 |   44.6%
+Long-term Incentive Plan|    115,322,523 |   8.3%
+Circulating Supply (including LEAF and short-term incentive)|    622,197,280 |   52.6%
 **Total Supply**    |   <a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054</a>   |   **100.0%**
  
-[LEAF (Loopring Ecosystem Advancement Fund)](https://medium.com/loopring-protocol/loopring-2018-rnd-roadmap-33b423526669)  was set up to support the development of Loopring ecosystem. Currently 11.5% of the total supply was put into LEAF, and we will put additional 8.5% in next four years.
+[LEAF (Loopring Ecosystem Advancement Fund)](https://medium.com/loopring-protocol/loopring-2018-rnd-roadmap-33b423526669)  was set up to support the development of Loopring ecosystem. Currently 16.8% of the total supply was put into LEAF, and we will put additional 3.2% in next four years.
 
 |Address  | LRC Balance|
 |------------- | -------------:|
-0x51018afFFaD06730D5b815486e6d9acE7bA99409 (LEAF)   |   161,094,855  |
- SUB-TOTAL  |   161,094,855 |
+0x9952F869f12a7af92aB86B275cFa231C868Aad23 (LEAF-1)   |   44,754,486  |
+0x51018afFFaD06730D5b815486e6d9acE7bA99409 (LEAF-2)   | 161,094,855  |
+0x81A5c6392c4DBE91fC942FA2010563c88D830Cf4 (LEAF-3)   | 27,876,599 
+0x8b34fbc553db3462ad4909f2e5577cc22f63c216 (Mid-term Incentive Plan) | 39,261,025|
+ SUB-TOTAL  |   272,986,964 |
 
 
 Please note:
