@@ -34,8 +34,8 @@ Additionally, the following LRCs are not under our control but is not supposed t
 
 |Address  | LRC Balance|
 |------------- | -------------:|
-[addresses not available] (institute investors, circulating in 9 months)  |   100,065,000 |
-0x239dE3a0D6ca5f21601f83327eA2174225eB7156 (long-term plan, circulating in 1.5 year)  |   115,322,523 |
+[addresses not available] (institute investors, circulating after Sept 2018)  |   100,065,000 |
+0x239dE3a0D6ca5f21601f83327eA2174225eB7156 (long-term plan, circulating after  March 2019)  |   115,322,523 |
  SUB-TOTAL  |   215,387,523 |
 
 
@@ -48,7 +48,7 @@ Foundation  |   425,479,956   |   30.5%
 Burned  |   20,119,186  |   1.4%
 Institute Investors |   100,065,000 |   7.2%
 Long-term Incentive Plan|    115,322,523 |   8.3%
-Circulating Supply (including LEAF and short-term incentive)|    622,197,280 |   52.6%
+Circulating Supply (including LEAF and mid-term incentive plan, see below)|    622,197,280 |   52.6%
 **Total Supply**    |   <a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054</a>   |   **100.0%**
  
 [LEAF (Loopring Ecosystem Advancement Fund)](https://medium.com/loopring-protocol/loopring-2018-rnd-roadmap-33b423526669)  was set up to support the development of Loopring ecosystem. Currently 16.8% of the total supply was put into LEAF, and we will put additional 3.2% in next four years.
@@ -58,7 +58,7 @@ Circulating Supply (including LEAF and short-term incentive)|    622,197,280 |  
 0x9952F869f12a7af92aB86B275cFa231C868Aad23 (LEAF-1)   |   44,754,486  |
 0x51018afFFaD06730D5b815486e6d9acE7bA99409 (LEAF-2)   | 161,094,855  |
 0x81A5c6392c4DBE91fC942FA2010563c88D830Cf4 (LEAF-3)   | 27,876,599 
-0x8b34fbc553db3462ad4909f2e5577cc22f63c216 (Mid-term Incentive Plan) | 39,261,025|
+0x8b34fbc553db3462ad4909f2e5577cc22f63c216 (Mid-term incentive plan) | 39,261,025|
  SUB-TOTAL  |   272,986,964 |
 
 
