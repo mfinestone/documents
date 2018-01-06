@@ -868,45 +868,14 @@
                 
                 <h1 id="loopring">Loopring スマートコントラクト</h1>
 <p>Loopringスマートコントラクトは、Loopringプロトコルを実装した一連のEthereumコントラクトです。このドキュメントでは、それらが提供する機能を下記の構成で説明します。</p>
-<ul>
-<li><a href="./#management-of-orders">注文の管理</a><ul>
-<li><a href="./#anatomy-of-an-order">注文の詳細な分析</a></li>
-<li><a href="./#full-or-partial-cancellation">完全または部分的なキャンセル</a></li>
-<li><a href="./#fill-and-cancellation-tracking">約定とキャンセルの追跡</a></li>
-</ul>
-</li>
-<li><a href="./#verification-of-miner-supplied-data">マイナーが提供するデータの検証</a><ul>
-<li><a href="./#order-ring">注文リング</a></li>
-<li><a href="./#order-ring-validation">注文リングの検証</a><ul>
-<li><a href="./#sub-loop-checking">サブループの確認</a></li>
-<li><a href="./#fill-rate-checking">約定レート確認</a></li>
-<li><a href="./#order-scaling">注文スケーリング</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="./#ring-settlement">リング決済</a><ul>
-<li><a href="./#transactions">トランザクション</a></li>
-<li><a href="./#fee-model">手数料モデル</a></li>
-</ul>
-</li>
-<li><a href="./#emitted-events">発生イベント</a></li>
-<li><a href="./#fraud-and-attack-protections">詐欺と攻撃からの保護</a><ul>
-<li><a href="./#ring-filch">リングフィルチュ</a></li>
-<li><a href="./#denial-of-service">サービスの拒否</a></li>
-<li><a href="./#massive-tiny-order-attack">大規模な小型注文攻撃</a></li>
-<li><a href="./#insufficient-balance">残高不足</a></li>
-</ul>
-</li>
-</ul>
-<p>コードはオープンソースで<a href="https://github.com/Loopring/protocol">github</a>から入手できます。</p>
+<p>コードはオープンソースで<a href="https://github.com/Loopring/protocol">GitHub</a>から入手できます。</p>
 <p>このドキュメントでは、LoopringスマートコントラクトをLCSと言及します。<a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">ホワイトペーパー</a>およびSupersimmetry氏{<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>}の<a href="../../pdf/supersimmetry-loopring-remark.pdf">Loopringの所見</a>で、ここで使用されている計算と数式に関してさらに読むことができます。現状のプロトコルの実装におけるプライシングモデルはホワイトペーパーおよびSupersimmetry氏のドキュメントと同様ですが、手数料モデルは異なるということに注意してください。</p>
 <h2 id="_1">注文の管理</h2>
 <p>LSCの機能を理解するために、まずは注文の定義、ユーザーが利用可能な操作、および現在の注文ステータスの追跡方法を見ていく必要があります。</p>
 <h2 id="_2">注文の詳細な分析</h2>
 <p>注文とは、マーケットでのユーザーの意図を記述するデータの集まりです。注文の出どころを保証するため、ユーザーのプライベートキーを使って、<code class="codehilite">注文パラメータのハッシュで署名されます</code>。署名はネットワーク上の注文に沿って送信されます。これは、送信者のアドレスを検証するために、注文がライフタイムにわたり<code class="codehilite">不変</code>のままにすることを必要とします。<br/>
 <code class="codehilite">Signature = ECDSA(SHA3(order_params))</code></p>
-<p>注文が決して変更されない場合でも、LSCは<a href="./#transactions">現在の状態を計算する</a>ことが可能です。</p>
+<p>注文が決して変更されない場合でも、LSCは<a href="./#トランザクション">現在の状態を計算する</a>ことが可能です。</p>
 <p>注文のパラメータに関連する変数(注文のパラメータの完全な一覧は、<a href="https://github.com/Loopring/protocol/blob/ef5290d59daa7be4eee450b215d6a50ca9d3492d/contracts/LoopringProtocol.sol#L39">コード</a>を参照してください)：</p>
 <table>
 <thead>
@@ -963,12 +932,12 @@
 <p>ユーザは、注文に関する詳細およびキャンセルする金額を含む特別なトランザクションをLSCに送信することで、一部または全部をキャンセルすることができます。LSCは、これを考慮に入れ、キャンセルする金額を保管し、<code class="codehilite">OrderCancelled</code>イベントをネットワークに発行します。</p>
 <h3 id="_4">約定とキャンセルの追跡</h3>
 <p>LSCは、注文のハッシュを識別子として使用し、その値を格納することで、約定およびキャンセルの金額を追跡し続けます。このデータは一般にアクセス可能で、データ変更時に<code class="codehilite">OrderCancelled</code> / <code class="codehilite">OrderFilled</code>イベントが発行されます。</p>
-<p>この追跡は、<a href="./#ring-settlement">リング決済</a>のステップでのLSCに役立ちます。</p>
+<p>この追跡は、<a href="./#リング決済">リング決済</a>のステップでのLSCに役立ちます。</p>
 <h2 id="_5">マイナーが提供するデータの検証</h2>
 <p>このセクションでは、LSCがマイナーから受け取る予定のものと、データを検証するために取られるステップについて説明します。</p>
 <h3 id="_6">注文リング</h3>
 <p>LSCは、マイナーから注文リングを受け取ることを期待しています。1つの注文リングは、希望の交換レートまたはそれ以上でマッチングするようリンクされた、複数の注文です。例として下図を参照してください。</p>
-<p><img alt="" src="../../../img/diagrams/order-ring.png" /></p>
+<p><img alt="" src="../../img/diagrams/order-ring.png" /></p>
 <p>売却する各注文のトークンは、次に購入する注文のトークンであることに注意してください。これは、反対のペアの注文をマッチングさせることなく、各注文がトークンを効果的に売買できるよう、ループを作成します。</p>
 <p>1つのリングは、すべてのトランザクションがユーザによって指定されたオリジナルのものと同等またはそれ以上の交換レートで行われる場合に有効とされます。</p>
 <blockquote>
@@ -982,7 +951,7 @@
 <p>このステップは、<a href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">カバー付き金利裁定取引</a>を防止します。有効なリングがマイナーによって発見されると、マイナーはゼロリスクでカバー付き裁定取引を達成するために、他の注文を追加するよう誘惑される可能性があります。
 これはLoopringにおいて、マイナーからの不正な行為とみなされます。</p>
 <p>以下の図は、2つの注文が追加されたかつて有効だったリングを示しています。 
-<img alt="" src="../../../img/diagrams/order-ring-sub-loop.png" /></p>
+<img alt="" src="../../img/diagrams/order-ring-sub-loop.png" /></p>
 <p>これを防ぐために、Loopringでは**有効なループにサブループを含めることはできないこと**を要します。これを確認する非常に簡単な方法があります：<code class="codehilite">1つのトークンは購入または売却のポジションで2回存在できない</code>というものです。上の図では、ARKが売却するトークンとして2回および購入するトークンとして2回含まれていることがわかります。</p>
 <h3 id="_9">約定レートの確認</h3>
 <p>このページの上記理由により、リング内のトランザクションのレート計算はマイナーによって行われます。したがって、LSCはそれらが正しいことを確認する必要があります。</p>
@@ -1007,12 +976,12 @@
 <p>現在の手数料モデルでは、マイナーは２つの選択肢があります。
 ユーザーが注文を作成するとき、マイナーに支払う手数料のLRCの最大値と、マイナーが請求できる注文のマージンのパーセンテージを指定します。これは、マージン分割と呼びます。どちらを選択するかの決定は、マイナーに委ねられます。</p>
 <p>マージン分割の表現：</p>
-<p><img alt="" src="../../../img/diagrams/margin-split.png" /></p>
+<p><img alt="" src="../../img/diagrams/margin-split.png" /></p>
 <p>マイナーがリングのマージンが小さすぎると判断した場合、LRC手数料を選択します。反対に、マージンが十分であり、結果として生じるマージン分割がLRC手数料以上の価値がある場合は、マージン分割を選択します。</p>
 <p>しかし、ここで一ひねりがあります。マイナーがマージン分割を選択する場合、ユーザがトランザクションのためにマイナーに支払う予定の手数料と、同額の料金をユーザに支払う必要があります。これは、マイナーがマージン分割を選択する閾値を、注文のLRC手数料の2倍に上げ、LRC手数料の選択に重み付けを行います。</p>
 <p>マイナーの視点からみると、低いマージンのリングで一定の収入を得ることができますが、大きなマージンのリングからの収入が少なくなるという欠点があります。市場が成長し、成熟していくにつれ、高いマージンのリングが少なくなることが予想され、手数料モデルはその未来に基づいています。</p>
 <p>以下のグラフが結論です：</p>
-<p><img alt="" src="../../../img/fee-model.png" /></p>
+<p><img alt="" src="../../img/fee-model.png" /></p>
 <ul>
 <li>fはLRC手数料</li>
 <li>xはマージン分割</li>
