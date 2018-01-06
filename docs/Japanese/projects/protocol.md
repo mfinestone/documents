@@ -2,27 +2,7 @@
 
 Loopringスマートコントラクトは、Loopringプロトコルを実装した一連のEthereumコントラクトです。このドキュメントでは、それらが提供する機能を下記の構成で説明します。
 
-- [注文の管理](protocol.md#management-of-orders)
-	- [注文の詳細な分析](protocol.md#anatomy-of-an-order)
-	- [完全または部分的なキャンセル](protocol.md#full-or-partial-cancellation)
-	- [約定とキャンセルの追跡](protocol.md#fill-and-cancellation-tracking)
-- [マイナーが提供するデータの検証](protocol.md#verification-of-miner-supplied-data)
-	- [注文リング](protocol.md#order-ring)
-	- [注文リングの検証](protocol.md#order-ring-validation)
-		- [サブループの確認](protocol.md#sub-loop-checking)
-		- [約定レート確認](protocol.md#fill-rate-checking)
-		- [注文スケーリング](protocol.md#order-scaling)
-- [リング決済](protocol.md#ring-settlement)
-	- [トランザクション](protocol.md#transactions)
-	- [手数料モデル](protocol.md#fee-model)
-- [発生イベント](protocol.md#emitted-events)
-- [詐欺と攻撃からの保護](protocol.md#fraud-and-attack-protections)
-	- [リングフィルチュ](protocol.md#ring-filch)
-	- [サービスの拒否](protocol.md#denial-of-service)
-	- [大規模な小型注文攻撃](protocol.md#massive-tiny-order-attack)
-	- [残高不足](protocol.md#insufficient-balance)
-
-コードはオープンソースで[github](https://github.com/Loopring/protocol)から入手できます。
+コードはオープンソースで[GitHub](https://github.com/Loopring/protocol)から入手できます。
 
 このドキュメントでは、LoopringスマートコントラクトをLCSと言及します。[ホワイトペーパー](https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf)およびSupersimmetry氏{[da447m@yahoo.com](mailto:da447m@yahoo.com)}の[Loopringの所見](../pdf/supersimmetry-loopring-remark.pdf)で、ここで使用されている計算と数式に関してさらに読むことができます。現状のプロトコルの実装におけるプライシングモデルはホワイトペーパーおよびSupersimmetry氏のドキュメントと同様ですが、手数料モデルは異なるということに注意してください。
 
@@ -33,7 +13,7 @@ LSCの機能を理解するために、まずは注文の定義、ユーザー�
 注文とは、マーケットでのユーザーの意図を記述するデータの集まりです。注文の出どころを保証するため、ユーザーのプライベートキーを使って、`注文パラメータのハッシュで署名されます`。署名はネットワーク上の注文に沿って送信されます。これは、送信者のアドレスを検証するために、注文がライフタイムにわたり`不変`のままにすることを必要とします。<br/>
 `Signature = ECDSA(SHA3(order_params))`
 
-注文が決して変更されない場合でも、LSCは[現在の状態を計算する](protocol.md#transactions)ことが可能です。
+注文が決して変更されない場合でも、LSCは[現在の状態を計算する](protocol.md#トランザクション)ことが可能です。
 
 注文のパラメータに関連する変数(注文のパラメータの完全な一覧は、[コード](https://github.com/Loopring/protocol/blob/ef5290d59daa7be4eee450b215d6a50ca9d3492d/contracts/LoopringProtocol.sol#L39)を参照してください)：
 
@@ -61,7 +41,7 @@ LSCの機能を理解するために、まずは注文の定義、ユーザー�
 ### 約定とキャンセルの追跡
 LSCは、注文のハッシュを識別子として使用し、その値を格納することで、約定およびキャンセルの金額を追跡し続けます。このデータは一般にアクセス可能で、データ変更時に`OrderCancelled` / `OrderFilled`イベントが発行されます。
 
-この追跡は、[リング決済](protocol.md#ring-settlement)のステップでのLSCに役立ちます。
+この追跡は、[リング決済](protocol.md#リング決済)のステップでのLSCに役立ちます。
 
 ## マイナーが提供するデータの検証
 このセクションでは、LSCがマイナーから受け取る予定のものと、データを検証するために取られるステップについて説明します。
@@ -69,7 +49,7 @@ LSCは、注文のハッシュを識別子として使用し、その値を格�
 ### 注文リング
 LSCは、マイナーから注文リングを受け取ることを期待しています。1つの注文リングは、希望の交換レートまたはそれ以上でマッチングするようリンクされた、複数の注文です。例として下図を参照してください。
 
-![](/img/diagrams/order-ring.png)
+![](../img/diagrams/order-ring.png)
 
 売却する各注文のトークンは、次に購入する注文のトークンであることに注意してください。これは、反対のペアの注文をマッチングさせることなく、各注文がトークンを効果的に売買できるよう、ループを作成します。
 
@@ -87,7 +67,7 @@ LSCは、交換レートや金額の計算を行いませんが、マイナー�
 これはLoopringにおいて、マイナーからの不正な行為とみなされます。
 
 以下の図は、2つの注文が追加されたかつて有効だったリングを示しています。 
-![](/img/diagrams/order-ring-sub-loop.png)
+![](../img/diagrams/order-ring-sub-loop.png)
 
 これを防ぐために、Loopringでは**有効なループにサブループを含めることはできないこと**を要します。これを確認する非常に簡単な方法があります：`1つのトークンは購入または売却のポジションで2回存在できない`というものです。上の図では、ARKが売却するトークンとして2回および購入するトークンとして2回含まれていることがわかります。
 
@@ -125,7 +105,7 @@ LSCは、交換レートや金額の計算を行いませんが、マイナー�
 
 マージン分割の表現：
 
-![](/img/diagrams/margin-split.png)
+![](../img/diagrams/margin-split.png)
 
 マイナーがリングのマージンが小さすぎると判断した場合、LRC手数料を選択します。反対に、マージンが十分であり、結果として生じるマージン分割がLRC手数料以上の価値がある場合は、マージン分割を選択します。
 
@@ -135,7 +115,7 @@ LSCは、交換レートや金額の計算を行いませんが、マイナー�
 
 以下のグラフが結論です：
 
-![](/img/fee-model.png)
+![](../img/fee-model.png)
 
 - fはLRC手数料
 - xはマージン分割
