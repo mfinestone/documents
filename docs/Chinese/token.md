@@ -48,7 +48,7 @@ Foundation  |   425,479,956   |   30.5%
 Burned  |   20,119,186  |   1.4%
 Institute Investors |   100,065,000 |   7.2%
 Long-term Incentive Plan|    115,322,523 |   8.3%
-Circulating Supply (including LEAF and mid-term incentive plan, see below)|    622,197,280 |   52.6%
+Circulating Supply (including LEAF and mid-term incentive plan, see below)|    734,089,390 |   52.6%
 **Total Supply**    |   <a href="https://etherscan.io/token/0xEF68e7C694F40c8202821eDF525dE3782458639f">1,395,076,054</a>   |   **100.0%**
  
 [LEAF (Loopring Ecosystem Advancement Fund)](https://medium.com/loopring-protocol/loopring-2018-rnd-roadmap-33b423526669)  was set up to support the development of Loopring ecosystem. Currently 16.8% of the total supply was put into LEAF, and we will put additional 3.2% in next four years.
