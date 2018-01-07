@@ -9,7 +9,7 @@ To learn more about LRC token, checkout [https://etherscan.io/address/lrctoken.e
 
 ## Circulating Supply
 
-After the refunding effort to our Chinese investors, the total circulating supply ratio is 20.5%.
+The current circulationg supply is 622,197,280 LRC, 52.6% of the total LRC supply.
 
 The foundation controls the following addresses:
 
