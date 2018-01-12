@@ -9,7 +9,7 @@ To learn more about LRC token, checkout [https://etherscan.io/address/lrctoken.e
 
 ## Circulating Supply
 
-The current circulationg supply is 622,197,280 LRC, 52.6% of the total LRC supply.
+The current circulationg supply is 734,089,390 LRC, 52.6% of the total LRC supply.
 
 The foundation controls the following addresses:
 
