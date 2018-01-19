@@ -12,7 +12,7 @@ To learn more about LRC token, checkout [https://etherscan.io/address/lrctoken.e
 The current circulationg supply is 734,089,390 LRC, 52.6% of the total LRC supply.
 
 **NOTE:**
-**There is a discrepancy regarding the circulationg supply between this document (734,089,390 LRC) and [coinmarketcap.com](https://coinmarketcap.com) (561,167,415 LRC as of Jan 17, 2018) . This is because we use different standards - The Loopring Foundation considers the LEAF fund as part of the circulationg supply although only a portion of it is actually in circulation.**
+**There is a discrepancy regarding the circulating supply between this document (734,089,390 LRC) and [coinmarketcap.com](https://coinmarketcap.com) (561,167,415 LRC as of Jan 17, 2018). This is because we use different standards; the Loopring Foundation considers the LEAF fund as part of the circulating supply although only a portion of it is actually in circulation.**
 
 The foundation controls the following addresses:
 
