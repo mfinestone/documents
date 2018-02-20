@@ -1,5 +1,5 @@
 # documents
-Documents for Loopring sub-projects, accessible at https://docs.loopring.org
+The documents for Loopring sub-projects are accessible at https://docs.loopring.org.
 
 We use https://squidfunk.github.io/mkdocs-material/extensions/admonition/
 
