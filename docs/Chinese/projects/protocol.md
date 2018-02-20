@@ -10,7 +10,7 @@ The loopring smart contracts are a set of ethereum contracts that implement the 
 	- [Order Ring](protocol.md#order-ring)
 	- [Order Ring Validation](protocol.md#order-ring-validation)
 		- [Sub-Loop Checking](protocol.md#sub-loop-checking)
-		- [Fill Rate Checing](protocol.md#fill-rate-checking)
+		- [Fill Rate Checking](protocol.md#fill-rate-checking)
 		- [Order Scaling](protocol.md#order-scaling)
 - [Ring settlement](protocol.md#ring-settlement)
 	- [Transactions](protocol.md#transactions)
