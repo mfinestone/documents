@@ -867,13 +867,13 @@
                 
                 
                 <h1 id="loopring-smart-contracts">Loopring Smart Contracts</h1>
-<p>The loopring smart contracts are a set of ethereum contracts that implement the loopring protocol. This document describes the functionnalities they provide and is structured as follows:</p>
+<p>The loopring smart contracts are a set of ethereum contracts that implement the loopring protocol. This document describes the functionalities they provide and is structured as follows:</p>
 <p>The code is open source and available on <a href="https://github.com/Loopring/protocol">github</a>.</p>
-<p>The Loopring Smart Contracts will be refered as <code class="codehilite">LSC</code> in this document. You can read more about the calculations and formulas used here in the <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">whitepaper</a> and supersimmetry's {<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>} <a href="../../pdf/supersimmetry-loopring-remark.pdf">Remarks on Loopring</a>. Please be noted that in the current protocol implementation, the pricing model is the same as in our whitepaper and supersimmetry's document, but the fee model is different.</p>
+<p>The Loopring Smart Contracts will be referred to as <code class="codehilite">LSC</code> in this document. You can read more about the calculations and formulas used here in the <a href="https://github.com/Loopring/whitepaper/raw/master/en_whitepaper.pdf">whitepaper</a> and supersimmetry's {<a href="mailto:da447m@yahoo.com">da447m@yahoo.com</a>} <a href="../../pdf/supersimmetry-loopring-remark.pdf">Remarks on Loopring</a>. Please note that in the current protocol implementation, the pricing model is the same as in our whitepaper and supersimmetry's document, but the fee model is different.</p>
 <h2 id="management-of-orders">Management of Orders</h2>
-<p>To understand what the LSC does, we must first take a look at the definition of an order, the available actions for the user and how the current order state is tracked.</p>
+<p>To understand what the LSC does, we must first take a look at the definition of an order, the available actions for the user, and how the current order state is tracked.</p>
 <h3 id="anatomy-of-an-order">Anatomy of an Order</h3>
-<p>An order is a pack of data that describes the intent of the user on the market. To ensure the origin of the order, it is <code class="codehilite">signed against the hash of its parameters</code> with the user's private key. The signature is sent along the order on the network. This requires the order to stay <code class="codehilite">immutable</code> during its whole lifetime to verifiy the sender's address.<br/>
+<p>An order is a pack of data that describes the intent of the user on the market. To ensure the origin of the order, it is <code class="codehilite">signed against the hash of its parameters</code> with the user's private key. The signature is sent alongside the order on the network. This requires the order to stay <code class="codehilite">immutable</code> during its whole lifetime to verify the sender's address.<br/>
 <code class="codehilite">Signature = ECDSA(SHA3(order_params))</code></p>
 <p>Even if the order never changes, the LSC has the possibility to <a href="./#transactions">compute its current state</a>.</p>
 <p>Relevant variables of an order's parameters (for a complete list of order parameters, see <a href="https://github.com/Loopring/protocol/blob/ef5290d59daa7be4eee450b215d6a50ca9d3492d/contracts/LoopringProtocol.sol#L39">the code</a>):</p>
@@ -931,7 +931,7 @@
 <h3 id="full-or-partial-cancellation">Full or Partial Cancellation</h3>
 <p>A user can partially or fully cancel an order by sending a special transaction to the LSC, containing the details about the order and the amounts to cancel. The LSC will take that into account, store the amounts to cancel and emit an <code class="codehilite">OrderCancelled</code> event to the network.</p>
 <h3 id="fill-and-cancellation-tracking">Fill and Cancellation Tracking</h3>
-<p>The LSC keep track of fill and cancellation amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and <code class="codehilite">OrderCancelled</code> / <code class="codehilite">OrderFilled</code> events are emitted when it changes.</p>
+<p>The LSC keeps track of fill and cancellation amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and <code class="codehilite">OrderCancelled</code> / <code class="codehilite">OrderFilled</code> events are emitted when it changes.</p>
 <p>This tracking is useful for the LSC during the <a href="./#ring-settlement">ring settlement</a> step.</p>
 <h2 id="verification-of-miner-supplied-data">Verification of Miner Supplied Data</h2>
 <p>This section will talk about what the LSC expect to receive from the miners and the steps taken to verify the data.</p>
@@ -947,40 +947,40 @@ To verify the ring validity, the product of the original exchange rates of all o
 </blockquote>
 <h3 id="order-ring-validation">Order Ring Validation</h3>
 <p>The LSC does not perform the exchange rate or amount calculations but still has to verify what the miner supplied for these values. This is done by miners for two main reasons: solidity does not have support for floating point maths, especially <code class="codehilite">pow(x, 1/n)</code> and it is desired that the computation is made off-chain to save gas.</p>
-<p>The following section discusses mathematical validation of the order rings. We recommand you to check as a complementary supersimmetry's document listed at the beginning of this page.</p>
+<p>The following section discusses mathematical validation of the order rings. We recommend you to check supersimmetry's complementary document listed at the beginning of this page.</p>
 <h4 id="sub-loop-checking">Sub-Loop Checking</h4>
-<p>This step prevents about <a href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">covered interest arbitrage</a>. Once a valid ring is found by a miner, he could be tempted to add other orders to it to achieve a zero-risk covered interest arbitrage.
-This is considered as an unfair conduct from the miner in Loopring.</p>
-<p>The diagram bellow illustrates the previous valid ring where 2 orders were added.
+<p>This step prevents <a href="https://en.wikipedia.org/wiki/Covered_interest_arbitrage">covered interest arbitrage</a>. Once a valid ring is found by a miner, he could be tempted to add other orders to it to achieve a zero-risk covered interest arbitrage.
+This is considered unfair conduct from the miner in Loopring.</p>
+<p>The diagram below illustrates the previous valid ring where 2 orders were added.
 <img alt="" src="../../../img/diagrams/order-ring-sub-loop.png" /></p>
 <p>To prevent this, Loopring requires that <strong>a valid loop cannot contain a sub-loop</strong>. There is a very simple way to check this: a <code class="codehilite">token cannot be twice in a buy or sell position</code>. In the above diagram we can see that ARK is twice as a token to sell and twice as a token to buy.</p>
 <h3 id="fill-rate-checking">Fill Rate Checking</h3>
 <p>The rates calculation for the transactions in the ring are made by the miners for the reasons stated above in this page. Therefore the LSC have to verify that they are correct.</p>
-<p>This first verifies that the sell rate the miner supplied for each order is at least equal or less than the orginial sell rate set by the user. Meaning that the user gets a least the exchange rate he asked or better at the moment of the transaction.</p>
-<p>Once the exchange rates are confirmed we make sure that all the margins (discounts) are at the same percentage for every orders, to ensure fairness.</p>
+<p>This first verifies that the sell rate the miner supplied for each order is at least equal or less than the original sell rate set by the user. Meaning that the user gets at least the exchange rate he asked for or better at the moment of the transaction.</p>
+<p>Once the exchange rates are confirmed, we make sure that all the margins (discounts) are at the same percentage for every order, to ensure fairness.</p>
 <h3 id="order-scaling">Order Scaling</h3>
-<p>Comes the part where the orders are scaled according to:
-* The history of filled and cancelled amounts
-* The current balance of the senders accounts</p>
-<p>The process finds the order with the smallest amount to be filled according to the above caracteristics and uses it as a reference for scaling all the transactions in the ring.</p>
+<p>This is the part where the orders are scaled according to:
+- The history of filled and cancelled amounts
+- The current balance of the senders' accounts</p>
+<p>The process finds the order with the smallest amount to be filled according to the above characteristics and uses it as a reference for scaling all the transactions in the ring.</p>
 <blockquote>
-<p><strong>Example</strong>: If the smallest amount to be filled compared to the original order is 5%, all the transactions in the ring are scaled down to 5%. Once the transactions are completed, the order that was considered to have the smallest amount remaining to be filled should be completly filled.</p>
+<p><strong>Example</strong>: If the smallest amount to be filled compared to the original order is 5%, all the transactions in the ring are scaled down to 5%. Once the transactions are completed, the order that was considered to have the smallest amount remaining to be filled should be completely filled.</p>
 </blockquote>
 <h2 id="ring-settlement">Ring Settlement</h2>
-<p>All the lights are green from the previous checks, the transactions can be made.</p>
+<p>If all the lights are green from the previous checks, the transactions can be made.</p>
 <h3 id="transactions">Transactions</h3>
 <p>To make the transactions, the LSC uses the <code class="codehilite">TokenTransferDelegate</code> smart contract. The introduction of such a delegate makes upgrading the protocol smart contract easier as all orders only need to authorize this delegate instead of different versions of the protocol.</p>
-<p>For each order in the ring, a payment of tokenS is made to the previous order. Then the miner's fee is paied depending on the fee model chosen by the miner. If the model was the LRC fee, the remaining amount after the fee is paid is returned to the order's owner. Finally, an <code class="codehilite">OrderFilled</code> event is fired.</p>
+<p>For each order in the ring, a payment of tokenS is made to the following order. Then the miner's fee is paid depending on the fee model chosen by the miner. If the model was the LRC fee, the remaining amount after the fee is paid is returned to the order's owner. Finally, an <code class="codehilite">OrderFilled</code> event is fired.</p>
 <p>Once all the transaction are made, a <code class="codehilite">RingMined</code> event is fired.</p>
 <h3 id="fee-model">Fee Model</h3>
-<p>This section describes the current fee model of Loopring. As a complementary we advise you to read Daniel's <a href="https://medium.com/@loopring/remarks-on-looprings-fee-model-7b6713f59fb7">medium article</a> on the subject.</p>
+<p>This section describes the current fee model of Loopring. As complementary material, we advise you to read Daniel's <a href="https://medium.com/@loopring/remarks-on-looprings-fee-model-7b6713f59fb7">medium article</a> on the subject.</p>
 <p>In the current fee model, the miner has two possible choices.
-When a user creates his order, he specifies a maximum of LRC to be paid to the miner as a fee as well as a percentage of the margin made on his order that the miner can claim. This is called the margin split. The decision of which one to choose is left to the miner.</p>
+When a user creates his order, he specifies a maximum of LRC to be paid to the miner as a fee, as well as a percentage of the margin made on his order that the miner can claim. This is called the margin split. The decision of which one to choose is left to the miner.</p>
 <p>A representation of the margin split:</p>
 <p><img alt="" src="../../../img/diagrams/margin-split.png" /></p>
-<p>If the miner decides that the margin on the ring is too small, he will choose the LRC fee. On the contrary if the margin is consequent enough for the resulting margin split to be worth more than the LRC fee, he will choose the margin split.</p>
+<p>If the miner decides that the margin on the ring is too small, he will choose the LRC fee. On the contrary, if the margin is substantial enough for the resulting margin split to be worth more than the LRC fee, he will choose the margin split.</p>
 <p>But here comes the twist. When the miner chooses the margin split, he has to pay the user a fee, which is equal to what the user would have paid as a fee to the miner for his transaction. This increases the threshold where the miner will choose the margin split to twice the LRC fee of the order, adding weight to the LRC fee choice.</p>
-<p>From the miner's point of view, this allows him to get a constant income on low margin rings with the drawback of getting less income from the bigger margin rings. As the market grows and becomes more mature, we expect to have less high margin rings and our fee model is based on that future.</p>
+<p>From the miner's point of view, this allows him to get a constant income on low margin rings with the drawback of getting less income from the higher margin rings. As the market grows and becomes more mature, we expect to have less high margin rings and our fee model is based on that future.</p>
 <p>We end up with the following graph:</p>
 <p><img alt="" src="../../../img/fee-model.png" /></p>
 <ul>
@@ -1004,16 +1004,16 @@ When a user creates his order, he specifies a maximum of LRC to be paid to the m
 * <code class="codehilite">RingMined</code></p>
 <h2 id="fraud-and-attack-protections">Fraud and Attack Protections</h2>
 <h3 id="ring-filch">Ring Filch</h3>
-<p>An attacker could monitor all unconﬁrmed Rings and broadcast the same rings with their own digital signature. We call this Ring Filch. In order to prevent Ring Filch Loopring allows miners to use two steps in order to submit their Rings:</p>
+<p>An attacker could monitor all unconﬁrmed Rings and broadcast the same rings with their own digital signature. We call this Ring Filch. In order to prevent Ring Filch, Loopring allows miners to use two steps in order to submit their Rings:</p>
 <ul>
 <li>Submit the hash of the Ring and wait for confirmation</li>
 <li>Submit the Ring itself</li>
 </ul>
 <p>This protection is valid for a <code class="codehilite">blocksToLive</code> time specified in the LSC. After that duration, if the ring has not been submitted, an other miner can claim it.</p>
 <h3 id="denial-of-service">Denial of Service</h3>
-<p>We allow nodes to selectively handle orders by setting their own criterias and they may choose to hide or reveal them. Therefore we do not see denial of service as a form of unethical behaviour.</p>
+<p>We allow nodes to selectively handle orders by setting their own criteria and they may choose to hide or reveal them. Therefore we do not see denial of service as a form of unethical behaviour.</p>
 <h3 id="massive-tiny-order-attack">Massive Tiny Order Attack</h3>
-<p>A user could send a large amount of tiny orders to attack the Loopring nodes. However since we allow nodes to reject orders based on their own criterias, most of these orders will be rejected because they do not yield satisfying profit when matched. Thus making a massive tiny order attack not feasible.</p>
+<p>A user could send a large amount of tiny orders to attack the Loopring nodes. However, since we allow nodes to reject orders based on their own criteria, most of these orders will be rejected because they do not yield satisfying profit when matched. Thus, a massive tiny order attack is not feasible.</p>
 <h3 id="insufficient-balance">Insufficient Balance</h3>
 <p>Malicious users may sign and spread out orders whose value inside the order is not zero but whose address actually has zero balance. Nodes could monitor and notice that some orders actual balance is zero, update these orders states accordingly and then discard them.</p>
 <p>Nodes do have to spend time to update the status of an order, but can also choose to minimize the effort by, for example, blacklisting addresses and drop related orders.</p>
